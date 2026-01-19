@@ -4,6 +4,7 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+ 
 
     a {
         text-decoration: none;
@@ -16,9 +17,9 @@ header {
 
     svg { 
 
-        max-width: 240px;
+        max-width: 160px;
         height: auto;
-        margin-bottom: -90px;
+        margin-bottom: -60px;
         margin-top: -30px;
     }
 

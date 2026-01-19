@@ -96,109 +96,50 @@ const getDagNode = async (cid: string): Promise<any> => {
 };
 
 const downloadRecursive = async (
-  cid: string,
+  dagCid: string,
   basePath: string,
-  relativePath: string,
 ) => {
-  // console.log(`\nProcessing node: ${path.join(basePath, relativePath)}`);
-
   try {
-    // Try to get the DAG node
-    const node = await getDagNode(cid);
-    // console.log(node);
+    const node = await getDagNode(dagCid);
+    console.log(node);
 
-    // Check if this is a file node (has Data field)
-    const isFile = node.Data && isIpfsDataField(node.Data);
-    const currentPath = path.join(basePath, relativePath);
-
-    // console.log(node.Data);
-
-    if (isFile) {
-      // This is a file node, download its contents
-
-      const fileName = "index.html";
-
-      const main: any = node[fileName];
-
-      if (main) {
-        let mainCid = main["/"];
-
-        const response = await fetch(
-          `${process.env.IPFS_URL}/api/v0/cat?arg=${mainCid}`,
-          {
-            method: "POST",
-          },
-        );
-        if (!response.ok) {
-          throw new Error(`Failed to download file: ${response.statusText}`);
-        }
-        // Ensure parent directory exists
-        await fs.mkdir(path.dirname(currentPath), { recursive: true });
-
-        const buffer = Buffer.from(await response.arrayBuffer());
-        const filePath = currentPath + "/" + fileName;
-        await fs.writeFile(filePath, buffer);
-        //     console.log(`Successfully wrote file to ${filePath}`);
-      } else if (node.Data) {
-        const dirPath = path.join(basePath, relativePath);
-        await fs.mkdir(path.dirname(dirPath), { recursive: true });
-
-        // Write the file contents
-        const buffer = Buffer.from(node.Data["/"].bytes, "base64");
-        const text = buffer.toString("utf8");
-
-        // Clean the text by removing any invalid characters and stray letters at start/end
-        const cleanText = text
-          .replace(/[\x00-\x09\x0B\x0C\x0E-\x1F\x7F-\x9F\uFFFD]/g, "") // remove control chars and replacement character
-          .replace(/^[\uFFFD\s]*[a-zA-Z0-9]?|[a-zA-Z]?[\uFFFD\s]*$/g, ""); // clean start/end including single letters
-
-        // If it starts with <!DOCTYPE html> or <html>, it's HTML content
-        if (
-          cleanText.toLowerCase().includes("<!doctype html>") ||
-          cleanText.toLowerCase().includes("<html")
-        ) {
-          // console.log(`Processing HTML at ${dirPath}`);
-
-          // Determine the file path - if it already ends with index.html, use it as is
-          const filePath = dirPath.endsWith("index.html")
-            ? dirPath
-            : path.join(dirPath, "index.html");
-
-          try {
-            // Ensure the directory exists
-            await fs.mkdir(path.dirname(filePath), { recursive: true });
-            await fs.writeFile(filePath, cleanText, "utf8");
-            console.log(`Successfully wrote HTML to ${filePath}`);
-          } catch (error) {
-            console.error(`Failed to write file ${filePath}:`, error);
-            throw error;
-          }
-        } else {
-          console.log(
-            `Content is not HTML, starts with: ${text.substring(0, 20)}`,
-          );
-          console.log(`Skipping non-HTML content at ${dirPath}`);
-        }
-      }
-
-      if (node.Links && Array.isArray(node.Links)) {
-        for (const link of node.Links) {
-          //   console.log(link);
-          if (link.Hash && link.Name) {
-            //  console.log(`Processing link: ${link.Name} (${link.Hash['/']}) to ${path.join(currentPath, link.Name)}`);
-            await downloadRecursive(
-              link.Hash["/"],
-              basePath,
-              path.join(relativePath, link.Name),
-            );
-          }
-        }
-      }
+    if (!node.Links || !Array.isArray(node.Links)) {
+      console.log('No Links found in DAG');
+      return;
     }
+
+    for (const link of node.Links) {
+      const cid = link.Hash["/"];
+      const name = link.Name;
+      
+      // Determine file path - add /index.html for directory-style paths
+      const filePath = name === 'index.html'
+        ? path.join(basePath, 'index.html')
+        : path.join(basePath, name, 'index.html');
+
+      console.log(`Downloading ${cid} to ${filePath}`);
+
+      // Fetch the content
+      const response = await fetch(
+        `${process.env.IPFS_URL}/api/v0/cat?arg=${cid}`,
+        { method: "POST" }
+      );
+
+      if (!response.ok) {
+        throw new Error(`Failed to download file: ${response.statusText}`);
+      }
+
+      // Ensure directory exists
+      await fs.mkdir(path.dirname(filePath), { recursive: true });
+
+      // Write the file
+      const buffer = Buffer.from(await response.arrayBuffer());
+      await fs.writeFile(filePath, buffer);
+      console.log(`Successfully wrote ${filePath}`);
+    }
+
   } catch (err) {
-    // const error = err as Error;
-    console.log(`Failed to process complete DAG node `);
-    // throw e. deployrror;c
+    console.error('Failed to process DAG:', err);
   }
 };
 
@@ -210,7 +151,7 @@ export const downloadHTML = async (cid: string, outputPath: string) => {
     await fs.mkdir(outputPath, { recursive: true });
 
     // Download and process the DAG directly to the target directory
-    await downloadRecursive(cid, outputPath, "");
+    await downloadRecursive(cid, outputPath);
   } catch (error) {
     console.error("Failed to download from IPFS:", error);
     throw error;

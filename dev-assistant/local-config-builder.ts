@@ -57,32 +57,6 @@ export class LocalConfigBuilder {
     this.ipfsGateway = ipfsGateway;
   }
 
-  // Parse GitHub URL to get owner, repo, branch
-  // parseGitHubUrl(githubUrl: string): { owner: string; repo: string; branch: string } {
-  //   // Supports: https://github.com/owner/repo or https://github.com/owner/repo/tree/branch
-  //   const match = githubUrl.match(/github\.com\/([^/]+)\/([^/]+)(?:\/tree\/([^/]+))?/);
-  //   if (!match) {
-  //     throw new Error("Invalid GitHub URL");
-  //   }
-  //   return {
-  //     owner: match[1],
-  //     repo: match[2],
-  //     branch: match[3] || "main"
-  //   };
-  // }
-
-  // Fetch files from GitHub directory
-  // async getGitHubFiles(owner: string, repo: string, branch: string, path: string = ""): Promise<GitHubFile[]> {
-  //   const url = `https://api.github.com/repos/${owner}/${repo}/contents/${path}?ref=${branch}`;
-    
-  //   const response = await fetch(url);
-  //   if (!response.ok) {
-  //     throw new Error(`GitHub API error: ${response.statusText}`);
-  //   }
-    
-  //   const data = await response.json();
-  //   return Array.isArray(data) ? data : [];
-  // }
 
   async getAllFilesRecursive(dirPath: string = "."): Promise<LocalFile[]> {
     const files = await this.getLocalFiles(dirPath);

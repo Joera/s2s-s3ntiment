@@ -7,7 +7,7 @@ import * as ethers from 'ethers';
 
 const epk = process.env.PRIVATE_KEY_UNAMORE || process.env.PRIVATE_KEY || "";
 const SELECTED_LIT_NETWORK = LIT_NETWORK.Datil;
-const alchemy_key = process.env.ALCHEMY_KEY;
+const alchemy_key = process.env.ALCHEMY_KEY || "";
 
 export class MainController {
 

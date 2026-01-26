@@ -10,6 +10,9 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
+    "@lens-chain/storage-client": "^1.0.6",
+    "@lens-protocol/client": "0.0.0-canary-20250430134539",
+    "@lens-protocol/metadata": "^2.1.0",
     "@lit-protocol/auth-helpers": "^8.1.1",
     "@lit-protocol/contracts-sdk": "^7.3.1",
     "@s2s/soul2soul-shared": "file:../../protocol/npm",

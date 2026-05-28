@@ -1,0 +1,122 @@
+@use '../styleguide/typography.scss' as *;
+@use '../styleguide/colours' as *;
+@use '../styleguide/breakpoints' as *;
+
+#crowd2 {
+
+    position: fixed;
+    // z-index: 1;
+    top: 5rem;
+    left: 0;
+    width: auto;
+    height: 100vh;
+
+    @include breakpoint('sm') {
+        width: 100vw;
+        height: auto;
+    }
+}
+
+main {
+    position: relative;
+    // z-index: 2;
+}
+
+#hero { 
+
+    position: relative;
+    align-self: center;
+    padding: 1rem;
+
+    @include breakpoint('sm') {
+        padding: 0;
+    }
+
+    article {
+
+        margin-top: 0rem;
+        position: relative;
+    }
+
+    h2 {
+
+        display: grid;
+        align-self: flex-start;
+        gap: 2px;
+        margin: 0 0 2.5rem 0;
+        grid-template-columns: repeat(12, 28px);
+
+        @include breakpoint('sm') {
+            grid-template-columns: repeat(12, 46px);
+            gap: 4px;
+        }
+
+        > span {
+
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: $teal-darkest;
+            font-family: 'Azeret Mono', monospace;
+            font-weight: 400;
+            font-size: 1.22rem;
+            line-height: 1.3;
+            background-color: $teal-darkest;
+            color: white;
+            border-radius: 3px;
+            text-transform: uppercase;
+
+            @include breakpoint('sm') {
+                width: 46px;
+                height: 46px;
+                font-size: 2rem;
+                border-radius: 6px;
+            }
+
+            &:empty {
+                background: transparent;
+            }
+        }
+    }
+
+    p {
+        text-align: left;
+        color: $gray-black;
+       
+        margin-top: 0;
+        max-width: 620px;
+        align-self: flex-start;
+
+        > span {
+
+            background-color: $warm-gray-ultralight;
+            padding: .5rem;
+            box-decoration-break: clone;
+            -webkit-box-decoration-break: clone;
+            border-radius: 0;
+            font-size: 1rem;
+            line-height: 1.75;
+
+            @include breakpoint('sm') {
+                font-size: 1.125rem;
+                line-height: 1.75;
+            }
+        }
+    }
+
+    button {
+
+        // position: absolute;
+        // bottom: 6rem;
+        align-self: flex-start;
+        margin-top: 1.5rem;
+        color: white;
+        background: $teal-darkest;
+
+        &:hover {
+            background: $pink-dark;
+        }
+    }
+}

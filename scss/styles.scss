@@ -4,9 +4,10 @@
 @use 'styleguide/_fonts';
 @use 'styleguide/typography';
 
-
 @use 'basics/main';
 @use 'basics/layout';
+@use 'basics/nav';
+@use 'basics/buttons';
 
 @use 'templates/home';
 @use 'templates/page';

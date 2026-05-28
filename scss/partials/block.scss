@@ -1,0 +1,120 @@
+@use '../styleguide/typography.scss' as *;
+@use '../styleguide/colours' as *;
+@use '../styleguide/breakpoints' as *;
+
+
+
+.block {
+
+    position: relative;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+
+    @include breakpoint('sm') {
+        padding: 0 3rem 0 0;
+        margin-bottom: 0;
+    }
+
+    &:has(.circle) {
+        margin-bottom: 0;
+    }
+    
+    .circle {
+
+        position: absolute;
+        border-radius: 50%;
+        background: $warm-gray-lightest;
+
+        width: calc(100% - 2rem);
+        height: calc(100% - 2rem);
+
+        @include breakpoint('sm') {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &.ordered {
+
+        padding-right: 4rem;
+
+        &:not(:last-child)::after {                                                                                                                                                      
+            content: '';                                                                                                                                                                   
+            position: absolute;    
+            top: auto;
+            transform: rotate(180deg); 
+            bottom: -1.5rem;
+            right: calc(50% - 1.5rem);
+            width: 3rem;       // image width                                                                                                                                              
+            height: 3rem;  
+                                                                                                                                               
+            background: url('/assets/svg/triangle.svg') no-repeat center/contain;        
+            
+            @include breakpoint('sm') {
+                                                                                                                                                                                                                                                                                                                                   
+                transform: rotate(90deg);                                                                                                                                                   
+                  // image height     
+                right: 1rem;
+                top: calc(50% - 3rem); 
+            }
+            
+            svg path {
+                fill: $warm-gray-light;
+            }
+        }
+    } 
+
+
+    .tag {
+
+        @include heading-h2;
+        font-family: 'Azeret Mono', monospace;
+    }
+
+    h3 {
+
+        position: relative;
+        @include heading-h3;
+        color: $teal-darkest;
+        margin-bottom: .75rem;
+    }
+
+    a {
+
+        position: relative;
+        text-decoration: none;
+        border-bottom: 1px solid $teal-darkest;
+        align-self: flex-start;
+        color: $teal-darkest;
+
+        &:hover {
+
+            color: $pink-darkest;
+            border-bottom: 1px solid $pink-darkest;
+        }
+    }
+
+    p {
+        position: relative;
+    }
+
+    &:last-child {
+
+        padding-right: 0;
+    }
+
+    &.centered {
+
+        padding: 3rem;
+        
+        p {
+            text-align: center;
+        }
+
+
+    }
+
+
+}

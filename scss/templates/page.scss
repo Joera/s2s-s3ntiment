@@ -1,0 +1,109 @@
+
+@use '../styleguide/typography' as *;
+@use '../styleguide/colours' as *;
+
+#page {
+
+    margin-top: 5rem;
+    width: 100%;
+    // background-color: $gray-lightest;
+
+
+    #page-intro {
+
+        margin-top: 6rem;
+
+        .tag {
+            @include heading-h2;
+            margin-bottom: .25rem;
+            font-family: 'Azeret Mono', monospace;
+        }
+
+        h2 {
+            @include heading-h1;
+            color: $teal-darkest;
+            margin-bottom: 1.5rem;
+            font-size: 2.6rem;
+            line-height: 1.175;
+            text-transform: none;
+            letter-spacing: 0;
+
+        }
+
+        
+        p {
+            font-weight: 600;
+            font-size: 1.125rem;
+        }
+    }
+
+    #main-image {
+
+        margin: 3rem auto 6rem auto; 
+        background-color: $warm-gray-lightest;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .paragraph {
+
+
+        h3 {
+
+            @include heading-h3;
+            color: $teal-darkest;
+            margin-bottom: .75rem;
+            
+        }
+
+        h4 {
+            @include heading-h4;
+        }
+
+        a {
+            color: $teal-darkest;
+            text-decoration: none;
+            border-bottom: 1px solid $teal-medium;
+        }
+    }
+
+    #outro {
+
+        margin: 3rem 0;
+        padding: 1.5rem;
+
+        h3 {
+
+            font-family: "Azeret Mono", monospace;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+            color: black;
+            text-transform: uppercase;
+            letter-spacing: .5px;
+            font-weight: 400;
+
+        }
+
+        ul {
+            background: $teal-darkest;
+            flood-color: white;
+            margin:auto;
+            padding: 3rem 1.5rem 1.5rem 1.5rem; 
+            padding-left: 3rem;
+            list-style-type: disc;
+
+            li {
+
+                margin-bottom: .75rem;
+                color: white;
+            }
+        }
+
+        button {
+            align-self: flex-start;
+        }
+    }
+}

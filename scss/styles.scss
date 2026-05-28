@@ -1,15 +1,19 @@
 // Your SCSS styles go here
-@use 'styleguide/colours';
+@use 'styleguide/_breakpoints';
+@use 'styleguide/_colours';
+@use 'styleguide/_fonts';
 @use 'styleguide/typography';
-@use 'styleguide/breakpoints';
+
 
 @use 'basics/main';
-@use 'basics/containers';
-@use 'basics/images';
-@use 'basics/layouts';
-@use 'basics/header';
-@use 'basics/blog';
-@use 'basics/home';
+@use 'basics/layout';
 
+@use 'templates/home';
+@use 'templates/page';
+
+@use 'partials/block';
+@use 'partials/footer';
+@use 'partials/header';
+@use 'partials/intro';
 
 

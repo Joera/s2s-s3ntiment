@@ -1,0 +1,204 @@
+
+@use '../styleguide/typography.scss' as *;
+@use '../styleguide/colours' as *;
+@use '../styleguide/breakpoints' as *;
+
+#app {
+    width: 100%;
+}
+
+h2.header {
+
+    align-self: flex-start;
+
+    @include breakpoint('sm') {
+        align-self: center;
+    }
+
+    
+    margin: 0 0 3rem 1.5rem;
+    @include heading-h2;
+
+}
+
+#intro {
+
+    margin-top: 5rem;
+    height: calc(100vh - 5rem - 5rem);
+
+    @include breakpoint('sm') {
+
+        height: calc(100vh - 5rem - 12rem)
+    }
+}
+
+#why, #how, #who {
+
+    margin-top: -1px;  
+    padding: 3rem 0 0 0 ;
+   
+    background: $warm-gray-ultralight;
+
+    @include breakpoint('sm') {
+         padding: 3rem 0;
+    }
+}
+
+#how {
+
+    
+
+    @include breakpoint('sm') {
+        padding-bottom: 6rem;
+    }
+
+    input[type="radio"] { display: none; }
+
+    .tabs {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 4.5rem;
+
+    }
+
+    .tab {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        margin-right: -1px;
+        
+        // border-right: 1px solid $teal-darkest;
+        border-bottom: 1px solid $teal-darkest;
+        
+        cursor: pointer;
+        font-family: "Azeret Mono", monopace;
+        font-size: 1rem;
+        color: black;
+    }
+
+    // active tab
+    .tabs:has(#tr:checked) .tab:first-of-type,
+    .tabs:has(#to:checked) .tab:last-of-type {
+       border-bottom: none;
+       border-top: 1px solid $teal-darkest;
+    }
+
+    .tabs:has(#tr:checked) .tab:first-of-type {
+        border-right:  1px solid $teal-darkest;
+        border-left: 1px solid $teal-darkest;
+    }
+
+    .tabs:has(#to:checked) .tab:last-of-type {
+        border-right:  1px solid $teal-darkest;
+        border-left: 1px solid $teal-darkest;
+    }
+
+    // organisator hidden by default
+    #respondent ~ #organisator {
+        display: none;
+    }
+
+    // when organisator tab checked
+    .tabs:has(#to:checked) ~ #respondent {
+        display: none !important;
+    }
+    .tabs:has(#to:checked) ~ #organisator {
+        display: block !important;
+    }
+
+    // caret between blocks
+    .container-large .block.ordered + .block.ordered::before {
+        content: '›';
+        color: white;
+        font-weight: 300;
+        font-size: 2rem;
+        position: absolute;
+        left: -0.5rem;
+        top: 1.5rem;
+    }
+
+}
+
+
+
+#features {
+
+    background: $warm-gray-ultralight;
+    margin-top: -1px;
+
+    .container {
+
+        
+        justify-content: space-around;
+
+        @include breakpoint('sm') {
+
+            padding-bottom: 6rem;
+        }
+
+        > article {
+
+            max-width: 400px;
+        }
+
+    }
+}
+
+.intermezzo {
+
+    display: none;
+
+    @include breakpoint('sm') {
+        display: flex;
+    }
+
+    background: $warm-gray-ultralight;
+    padding: 3rem 0;
+    margin-top: -1px;
+
+    h3 {
+        @include heading-h3;
+        text-transform: uppercase;
+        color: black;
+        text-align: center;
+
+        > span {
+            background: $warm-gray-light;
+            font-family: 'Azeret Mono', monospace;
+            font-weight: 400;
+            font-size: 1.6rem;
+
+            &:empty {
+                background: transparent;
+            }
+        }
+    }
+
+}
+
+#outro {
+
+    background: $warm-gray-ultralight;
+    padding: 0 1rem;
+
+    @include breakpoint('sm') {
+        padding: 0;
+    }
+
+
+
+    h3 {
+        @include heading-h3;
+        color: $teal-darkest;
+        font-size: 2.8rem;
+        line-height: 1.2;
+    }
+
+    button {
+
+        background-color: $pink-dark;
+        color: white;
+        margin-top: 3rem;
+        align-self: center;
+        margin-bottom: 3rem;
+    }
+}

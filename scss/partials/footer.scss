@@ -1,0 +1,18 @@
+@use '../styleguide/colours' as *;
+
+#footer {
+
+    position: relative;
+    width: 100%;
+    min-height: 12rem;
+    background: $warm-gray-light;
+    padding: 2rem 0;
+
+    h1 {
+        color: black;
+
+        span {
+            color: $teal-darkest;
+        }
+    }
+}

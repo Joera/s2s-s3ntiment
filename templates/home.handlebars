@@ -2,14 +2,19 @@
 <html lang="{{language}}">
 {{> head }}
 <body>
+
+    <img id="crowd2" src="/assets/img/crowd2.jpg" /> 
+    
     {{> header}}
     <main>
+
+        {{> hero}}
 
         <section class="container medium_container flex_row ">
 
             {{#each collections.posts}}
                 <article id="{{this.id}}" class="block" author="{{author}}">
-                {{> background }}
+            
                 <div>
                 <a href=".{{this.path}}">
                     <span class="date">{{formatDate this.creationDate}}</span>

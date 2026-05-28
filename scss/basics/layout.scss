@@ -1,0 +1,55 @@
+@use '../styleguide/_breakpoints' as *;
+
+.container {
+
+    width: 100%;
+
+    @include breakpoint('sm') {
+        width: calc(100% - 1.5rem);
+    }
+}
+
+.container-large {
+    max-width: 1200px;
+}
+
+.container-small {
+    max-width: 900px;
+}
+
+.container-smaller {
+    max-width: 690px;
+}
+
+.container-full {
+    width: 100%;
+}
+
+.flex-row {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    @include breakpoint('sm') {
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+
+
+    }
+
+    
+
+    > * {
+        flex: 1;
+    }
+}
+
+.flex-stretch {
+
+    align-items: stretch;
+}

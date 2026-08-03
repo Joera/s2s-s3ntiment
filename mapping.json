@@ -1,38 +1,45 @@
 {
   "templateConfig": [
         {
-        "reference": "home",
-        "file": "home.handlebars",
-        "path": "/",
-        "collections": [
-          {
-            "slug": "posts",
-            "source": "lens",
-            "key": "posts",
-            "value": "post",
-            "query": { "method" : "queryByFeed", "args": { "feedAddress": "0xeC9aa5F2D067dF0550A8561650C45abb91eDd6ae"}},
-            "filters": [{"postType": "post"}]
-          }
-        ]
+          "reference": "home",
+          "file": "home.handlebars",
+          "path": "/",
+          "collections": [
+            {
+              "slug": "posts",
+              "source": "lens",
+              "key": "posts",
+              "value": "post",
+              "query": { "method" : "queryByFeed", "args": { "feedAddress": "0xeC9aa5F2D067dF0550A8561650C45abb91eDd6ae"}},
+              "filters": [{"postType": "post"}]
+            }
+          ]
         },
         {
-        "reference": "post",
-        "file": "post.handlebars",
-        "path": "/posts/{slug}/",
-        "collections": [],
-        "filters": []
+          "reference": "usp",
+          "file": "usp.handlebars",
+          "path": "/{slug}/",
+          "collections": [],
+          "filters": []
         },
         {
-        "reference": "page",
-        "file": "page.handlebars",
-        "path": "/{slug}/",
-        "collections": [],
-        "filters": []
+          "reference": "post",
+          "file": "post.handlebars",
+          "path": "/posts/{slug}/",
+          "collections": [],
+          "filters": []
+        },
+        {
+          "reference": "page",
+          "file": "page.handlebars",
+          "path": "/{slug}/",
+          "collections": [],
+          "filters": []
         }
     ],
     "ripples": [
       {
-        "origins": ["post"],
+        "origins": ["post","usp"],
         "destination": "home",
         "reference": "home",
         "query": { "method" : "queryById", "args": { "postId": "59576569822627528977768841523458803362723402109733483362861114645353366846746"}},

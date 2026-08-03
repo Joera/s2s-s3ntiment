@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="{{language}}">
+{{> head }}
+
+<body id="page">
+    {{> header}}
+    <main>
+        {{> background }}
+
+        <section id="page_container" class="container small_container">
+          
+            <article class="page">   
+                <h2>{{title}}</h2> 
+               
+                {{{extract_images content}}}          
+            </article>
+        
+        </section>
+    </main>
+    {{> footer }}
+</body>
+    {{> foot }} 
+</html>

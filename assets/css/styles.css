@@ -691,21 +691,21 @@ main {
   position: relative;
 }
 
-#hero {
+#intro {
   position: relative;
   align-self: center;
   padding: 1rem;
 }
 @media (min-width: 640px) {
-  #hero {
+  #intro {
     padding: 0;
   }
 }
-#hero article {
+#intro article {
   margin-top: 0rem;
   position: relative;
 }
-#hero h2 {
+#intro h2 {
   display: grid;
   align-self: flex-start;
   gap: 2px;
@@ -713,12 +713,12 @@ main {
   grid-template-columns: repeat(12, 28px);
 }
 @media (min-width: 640px) {
-  #hero h2 {
+  #intro h2 {
     grid-template-columns: repeat(12, 46px);
     gap: 4px;
   }
 }
-#hero h2 > span {
+#intro h2 > span {
   width: 28px;
   height: 28px;
   display: flex;
@@ -735,24 +735,24 @@ main {
   text-transform: uppercase;
 }
 @media (min-width: 640px) {
-  #hero h2 > span {
+  #intro h2 > span {
     width: 46px;
     height: 46px;
     font-size: 2rem;
     border-radius: 6px;
   }
 }
-#hero h2 > span:empty {
+#intro h2 > span:empty {
   background: transparent;
 }
-#hero p {
+#intro p {
   text-align: left;
   color: #191B1C;
   margin-top: 0;
   max-width: 620px;
   align-self: flex-start;
 }
-#hero p > span {
+#intro p > span {
   background-color: #F6F6F1;
   padding: 0.5rem;
   box-decoration-break: clone;
@@ -762,18 +762,18 @@ main {
   line-height: 1.75;
 }
 @media (min-width: 640px) {
-  #hero p > span {
+  #intro p > span {
     font-size: 1.125rem;
     line-height: 1.75;
   }
 }
-#hero button {
+#intro button {
   align-self: flex-start;
   margin-top: 1.5rem;
   color: white;
   background: #355C53;
 }
-#hero button:hover {
+#intro button:hover {
   background: #AA5A6C;
 }
 

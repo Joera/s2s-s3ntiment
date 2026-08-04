@@ -6,18 +6,14 @@
           "path": "/",
           "collections": [
             {
-              "slug": "posts",
-              "source": "lens",
-              "key": "posts",
-              "value": "post",
-              "query": { "method" : "queryByFeed", "args": { "feedAddress": "0xeC9aa5F2D067dF0550A8561650C45abb91eDd6ae"}},
-              "filters": [{"postType": "post"}]
+              "slug": "why",
+              "filters": [{"postType": "why"}]
             }
           ]
         },
         {
-          "reference": "usp",
-          "file": "usp.handlebars",
+          "reference": "why",
+          "file": "why.handlebars",
           "path": "/{slug}/",
           "collections": [],
           "filters": []

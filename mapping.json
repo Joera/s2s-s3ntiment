@@ -11,11 +11,11 @@
             },
             {
               "slug": "how-respondent",
-              "filters": [{"postType": "how"}]
+              "filters": [{"postType": "how", "tags": "respondent"}]
             },
             {
-              "slug": "how-organisor",
-              "filters": [{"postType": "how"}]
+              "slug": "how-organisator",
+              "filters": [{"postType": "how", "tags": "organisator"}]
             }
           ]
         },

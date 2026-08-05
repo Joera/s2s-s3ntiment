@@ -16,6 +16,14 @@
             {
               "slug": "how-organisator",
               "filters": [{"postType": "how", "tags": "organisator"}]
+            },
+            {
+              "slug": "features",
+              "filters": [{"postType": "feature" }]
+            },
+            {
+              "slug": "who",
+              "filters": [{"postType": "who" }]
             }
           ]
         },
@@ -28,6 +36,20 @@
         },
         {
           "reference": "how",
+          "file": null,
+          "path": null,
+          "collections": [],
+          "filters": []
+        },
+        {
+          "reference": "feature",
+          "file": null,
+          "path": null,
+          "collections": [],
+          "filters": []
+        },
+        {
+          "reference": "who",
           "file": null,
           "path": null,
           "collections": [],
@@ -50,7 +72,7 @@
     ],
     "ripples": [
       {
-        "origins": ["post","why","how"],
+        "origins": ["post","why","how","feature","who"],
         "destination": "home",
         "reference": "home",
         "query": { "genesis": "0x9a1600a648241726b0470d0b0b85df1d166e0aa74b88789b5f569294baa5a063"},

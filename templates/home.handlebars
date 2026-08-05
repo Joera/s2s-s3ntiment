@@ -69,6 +69,36 @@
             </div>
 
         </section>
+
+        <section id="features" class="container centered">
+
+            <h2 class="header">mogelijkheden</h2>
+
+            <div class="container container-small flex-row flex-stretch">
+
+                {{#each collections.features}}
+                    <article class="block centered">
+                        <div class="circle"></div>
+                        <h3>{{this.title}}</h3>
+                        {{{this.content}}}
+                    </article>
+                {{/each}}
+
+            </div>
+
+            <div class="container container-small flex-row flex-stretch">
+
+                {{#each collections.features}}
+                    <article class="block centered">
+                        <div class="circle"></div>
+                        <h3>{{this.title}}</h3>
+                        {{{this.content}}}
+                    </article>
+                {{/each}}
+
+            </div>
+
+        </section>
       
     </main>
 

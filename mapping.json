@@ -8,6 +8,14 @@
             {
               "slug": "why",
               "filters": [{"postType": "why"}]
+            },
+            {
+              "slug": "how-respondent",
+              "filters": [{"postType": "how"}]
+            },
+            {
+              "slug": "how-organisor",
+              "filters": [{"postType": "how"}]
             }
           ]
         },
@@ -15,6 +23,13 @@
           "reference": "why",
           "file": "why.handlebars",
           "path": "/{slug}/",
+          "collections": [],
+          "filters": []
+        },
+        {
+          "reference": "how",
+          "file": null,
+          "path": null,
           "collections": [],
           "filters": []
         },
@@ -35,7 +50,7 @@
     ],
     "ripples": [
       {
-        "origins": ["post","why"],
+        "origins": ["post","why","how"],
         "destination": "home",
         "reference": "home",
         "query": { "method" : "queryById", "args": { "genesis": "0x9a1600a648241726b0470d0b0b85df1d166e0aa74b88789b5f569294baa5a063"}},

@@ -27,8 +27,6 @@
 
         </section>
 
-        <!-- <span>W</span><span>I</span><span>J</span><span class="empty"></span><span>M</span><span>A</span><span>K</span><span>E</span><span>N</span><span class="empty"></span><span>C</span><span>R</span><span>Y</span><span>P</span><span>T</span><span>O</span><span>G</span><span>R</span><span>A</span><span>F</span><span>I</span><span>E</span><span class="empty"></span><span class="empty"></span><span>T</span><span>O</span><span>E</span><span>G</span><span>A</span><span>N</span><span>K</span><span>E</span><span>L</span><span>I</span><span>J</span><span>K</span><span class="empty"></span><span>V</span><span>O</span><span>O</span><span>R</span><span class="empty"></span><span>I</span><span>E</span><span>D</span><span>E</span><span>R</span><span>E</span><span class="empty"></span><span>O</span><span>R</span><span>G</span><span>A</span><span>N</span><span>I</span><span>S</span><span>A</span><span>T</span><span>I</span><span>E</span><span>.</span><span class="empty"></span><span>Z</span><span>W</span><span>A</span><span>R</span><span>E</span><span class="empty"></span><span class="empty"></span><span class="empty"></span><span class="empty"></span><span class="empty"></span><span>W</span><span>I</span><span>S</span><span>K</span><span>U</span><span>N</span><span>D</span><span>E</span><span>,</span><span class="empty"></span><span>S</span><span>I</span><span>M</span><span>P</span><span>E</span><span>L</span><span class="empty"></span><span>I</span><span>N</span><span class="empty"></span><span class="empty"></span><span class="empty"></span><span class="empty"></span><span class="empty"></span><span>G</span><span>E</span><span>B</span><span>R</span><span>U</span><span>I</span><span>K</span><span>.</span><span class="empty"></span><span class="empty"></span><span class="empty"></span><span class="empty"></span><span class="empty"></span><span class="empty"></span><span class="empty"></span><span class="empty"></span><span class="empty"></span><span class="empty"></span><span class="empty"></span><span class="empty"></span><span class="empty"></span><span class="empty"></span><span class="empty"></span><span class="empty"></span> -->
-
         <section class="intermezzo container flex-centered">
         
             <article class="container container-large flex-centered">
@@ -48,6 +46,27 @@
                 <label for="to" class="tab">Organisator</label>
             </div>
 
+            <div id="respondent" class="row-wrap">
+                <div class="container-large flex-row">
+                    {{#each collections.how-respondent}}
+                        <article class="block ordered">
+                            <h3>{{this.title}}</h3>
+                            {{{this.content}}}
+                        </article>
+                    {{/each}}
+                </div>
+            </div>
+
+            <div id="organisor" class="row-wrap">
+                <div class="container-large flex-row">
+                    {{#each collections.how-organisor}}
+                        <article class="block ordered">
+                            <h3>{{this.title}}</h3>
+                            {{{this.content}}}
+                        </article>
+                    {{/each}}
+                </div>
+            </div>
 
         </section>
       

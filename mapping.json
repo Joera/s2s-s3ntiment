@@ -35,10 +35,10 @@
     ],
     "ripples": [
       {
-        "origins": ["post","usp"],
+        "origins": ["post","why"],
         "destination": "home",
         "reference": "home",
-        "query": { "method" : "queryById", "args": { "postId": "59576569822627528977768841523458803362723402109733483362861114645353366846746"}},
+        "query": { "method" : "queryById", "args": { "genesis": "0x9a1600a648241726b0470d0b0b85df1d166e0aa74b88789b5f569294baa5a063"}},
         "filters": []
       }
     ]

@@ -15,15 +15,11 @@
             <div class="container-large flex-row">
 
                 {{#each collections.why}}
-                    <article id="{{this.id}}" class="block" author="{{author}}">
-                
-                    <div>
-                    <a href=".{{this.path}}">
-                        <span class="date">{{formatDate this.creationDate}}</span>
+                    <article id="{{this.id}}" class="block" author="{{this.author}}">
+                        <span class="tag">{{this.custom.subtitle}}</span>
                         <h3>{{this.title}}</h3>
-                        <div class="author">{{authorFromAddress this.author}}</div>
-                    </a>
-                    </div>
+                        {{{this.custom.summary}}}
+                        <a href=".{{this.path}}">Meer over {{this.custom.subtitle}}</a>
                     </article>
                 {{/each}}
 
@@ -34,7 +30,7 @@
         <section class="intermezzo container flex-centered">
         
             <article class="container container-large flex-centered">
-                    <h3 text-scramble="" style="display: grid; grid-template-columns: repeat(24, 32px); gap: 4px; width: 860px;"><span>W</span><span>I</span><span>J</span><span class="empty"></span><span>M</span><span>A</span><span>K</span><span>E</span><span>N</span><span class="empty"></span><span>C</span><span>R</span><span>Y</span><span>P</span><span>T</span><span>O</span><span>G</span><span>R</span><span>A</span><span>F</span><span>I</span><span>E</span><span class="empty"></span><span class="empty"></span><span>T</span><span>O</span><span>E</span><span>G</span><span>A</span><span>N</span><span>K</span><span>E</span><span>L</span><span>I</span><span>J</span><span>K</span><span class="empty"></span><span>V</span><span>O</span><span>O</span><span>R</span><span class="empty"></span><span>I</span><span>E</span><span>D</span><span>E</span><span>R</span><span>E</span><span class="empty"></span><span>O</span><span>R</span><span>G</span><span>A</span><span>N</span><span>I</span><span>S</span><span>A</span><span>T</span><span>I</span><span>E</span><span>.</span><span class="empty"></span><span>Z</span><span>W</span><span>A</span><span>R</span><span>E</span><span class="empty"></span><span class="empty"></span><span class="empty"></span><span class="empty"></span><span class="empty"></span><span>W</span><span>I</span><span>S</span><span>K</span><span>U</span><span>N</span><span>D</span><span>E</span><span>,</span><span class="empty"></span><span>S</span><span>I</span><span>M</span><span>P</span><span>E</span><span>L</span><span class="empty"></span><span>I</span><span>N</span><span class="empty"></span><span class="empty"></span><span class="empty"></span><span class="empty"></span><span class="empty"></span><span>G</span><span>E</span><span>B</span><span>R</span><span>U</span><span>I</span><span>K</span><span>.</span><span class="empty"></span><span class="empty"></span><span class="empty"></span><span class="empty"></span><span class="empty"></span><span class="empty"></span><span class="empty"></span><span class="empty"></span><span class="empty"></span><span class="empty"></span><span class="empty"></span><span class="empty"></span><span class="empty"></span><span class="empty"></span><span class="empty"></span><span class="empty"></span></h3>
+                <h3 text-scramble="" style="display: grid; grid-template-columns: repeat(24, 32px); gap: 4px; width: 860px;"><span>W</span><span>I</span><span>J</span><span class="empty"></span><span>M</span><span>A</span><span>K</span><span>E</span><span>N</span><span class="empty"></span><span>C</span><span>R</span><span>Y</span><span>P</span><span>T</span><span>O</span><span>G</span><span>R</span><span>A</span><span>F</span><span>I</span><span>E</span><span class="empty"></span><span class="empty"></span><span>T</span><span>O</span><span>E</span><span>G</span><span>A</span><span>N</span><span>K</span><span>E</span><span>L</span><span>I</span><span>J</span><span>K</span><span class="empty"></span><span>V</span><span>O</span><span>O</span><span>R</span><span class="empty"></span><span>I</span><span>E</span><span>D</span><span>E</span><span>R</span><span>E</span><span class="empty"></span><span>O</span><span>R</span><span>G</span><span>A</span><span>N</span><span>I</span><span>S</span><span>A</span><span>T</span><span>I</span><span>E</span><span>.</span><span class="empty"></span><span>Z</span><span>W</span><span>A</span><span>R</span><span>E</span><span class="empty"></span><span class="empty"></span><span class="empty"></span><span class="empty"></span><span class="empty"></span><span>W</span><span>I</span><span>S</span><span>K</span><span>U</span><span>N</span><span>D</span><span>E</span><span>,</span><span class="empty"></span><span>S</span><span>I</span><span>M</span><span>P</span><span>E</span><span>L</span><span class="empty"></span><span>I</span><span>N</span><span class="empty"></span><span class="empty"></span><span class="empty"></span><span class="empty"></span><span class="empty"></span><span>G</span><span>E</span><span>B</span><span>R</span><span>U</span><span>I</span><span>K</span><span>.</span><span class="empty"></span><span class="empty"></span><span class="empty"></span><span class="empty"></span><span class="empty"></span><span class="empty"></span><span class="empty"></span><span class="empty"></span><span class="empty"></span><span class="empty"></span><span class="empty"></span><span class="empty"></span><span class="empty"></span><span class="empty"></span><span class="empty"></span><span class="empty"></span></h3>
             </article>
         </section>
 

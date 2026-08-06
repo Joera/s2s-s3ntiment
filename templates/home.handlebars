@@ -77,7 +77,7 @@
             <div class="container container-small flex-row flex-stretch">
 
                 {{#each (slice collections.features 0 2)}}
-                    <article class="block centered">
+                    <article class="block flex-centered">
                         <div class="circle"></div>
                         <h3>{{this.title}}</h3>
                         {{{this.content}}}
@@ -89,7 +89,7 @@
             <div class="container container-small flex-row flex-stretch">
 
                 {{#each (slice collections.features 2 2)}}
-                    <article class="block centered">
+                    <article class="block flex-centered">
                         <div class="circle"></div>
                         <h3>{{this.title}}</h3>
                         {{{this.content}}}
@@ -98,6 +98,43 @@
 
             </div>
 
+        </section>
+
+        <section class="intermezzo container flex-centered">
+       
+            <article class="container container-large flex-centered">
+                <h3 text-scramble style="display: grid; grid-template-columns: repeat(24, 32px); gap: 4px; width: 860px;">Voor iedereen die mensen wil bevragen en eerlijke antwoorden wil terugkrijgen</h3>
+            </article>
+    
+        </section>
+
+        <section id="who" class="container flex-centered">
+
+            <h2 class="header">voor wie?</h2>
+
+            <div class="container-large flex-row">
+                {{#each collections.who}}
+                    <article class="block">
+                        <h3>{{this.title}}</h3>
+                        {{{this.content}}}
+                    </article>
+                {{/each}}
+            </div>
+
+        </section>
+
+        <section id="outro" class="container flex-centered">
+        
+            <article class="container container-small flex-centered">
+            
+                <h3>
+                    De meest waardevolle feedback ligt in antwoorden die mensen nu niet durven te geven. S3ntiment verandert dat.
+                </h3>
+
+                <button class="btn-primary">Neem contact op</button>
+            
+            </article>
+        
         </section>
       
     </main>

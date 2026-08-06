@@ -31,8 +31,12 @@
           "reference": "why",
           "file": "why.handlebars",
           "path": "/{slug}/",
-          "collections": [],
-          "filters": []
+          "collections": [
+            {
+              "slug": "why",
+              "filters": [{"postType": "why"}]
+            }
+          ]
         },
         {
           "reference": "how",

@@ -14,6 +14,15 @@
                
                 {{{extract_images content}}}          
             </article>
+
+            {{#each collections.why}}
+                <article id="{{this.id}}" class="block" author="{{this.author}}">
+                    <span class="tag">{{this.custom.subtitle}}</span>
+                    <h3>{{this.title}}</h3>
+                    {{{this.custom.summary}}}
+                    <a href=".{{this.path}}">Meer over {{this.custom.subtitle}}</a>
+                </article>
+            {{/each}}
         
         </section>
     </main>

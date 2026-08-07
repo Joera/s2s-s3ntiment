@@ -6,12 +6,13 @@
     {{> header}}
     <main id="page">
 
-        <section id="page_container" class="container small_container">
+        <section id="page_container" class="container container-small">
           
             <article class="page">   
+                <span class="tag">{{custom.subtitle}}</span>
                 <h2>{{title}}</h2> 
                
-                {{{extract_images content}}}          
+                {{{extract_images extract_intro content}}}          
             </article>
 
             {{#each collections.why}}

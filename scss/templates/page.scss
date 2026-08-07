@@ -6,7 +6,13 @@
 
     margin-top: 5rem;
     width: 100%;
+    align-items: center;
     // background-color: $gray-lightest;
+
+    p {
+        font-size: 1.125rem;
+        line-height: 1.425;
+    }
 
 
     #page-intro {
@@ -33,7 +39,7 @@
         
         p {
             font-weight: 600;
-            font-size: 1.125rem;
+           
         }
     }
 

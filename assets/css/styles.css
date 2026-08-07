@@ -415,6 +415,11 @@ h2.header {
 #page {
   margin-top: 5rem;
   width: 100%;
+  align-items: center;
+}
+#page p {
+  font-size: 1.125rem;
+  line-height: 1.425;
 }
 #page #page-intro {
   margin-top: 6rem;
@@ -446,7 +451,6 @@ h2.header {
 }
 #page #page-intro p {
   font-weight: 600;
-  font-size: 1.125rem;
 }
 #page #main-image {
   margin: 3rem auto 6rem auto;

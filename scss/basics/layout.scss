@@ -1,6 +1,6 @@
 @use '../styleguide/_breakpoints' as *;
 
-.container {
+@mixin container {
 
     display: flex;
     flex-direction: column;
@@ -11,20 +11,40 @@
     }
 }
 
-.container-large {
+.container {
+    @include container;
+}
+
+@mixin container-large {
     max-width: 1200px;
 }
 
-.container-small {
+.container-large {
+    @include container-large;
+}
+
+@mixin container-small {
     max-width: 900px;
 }
 
-.container-smaller {
+.container-small {
+    @include container-small;
+}
+
+@mixin container-smaller {
     max-width: 690px;
 }
 
-.container-full {
+.container-smaller {
+    @include container-smaller;
+}
+
+@mixin container-full {
     width: 100%;
+}
+
+.container-full {
+    @include container-full;
 }
 
 .flex-row {

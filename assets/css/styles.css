@@ -421,10 +421,17 @@ h2.header {
   font-size: 1.125rem;
   line-height: 1.425;
 }
-#page #page-intro {
-  margin-top: 6rem;
+#page > p {
+  max-width: 900px;
 }
-#page #page-intro .tag {
+#page > p:first-of-type {
+  font-weight: 700;
+}
+#page #page-header {
+  margin-top: 6rem;
+  max-width: 900px;
+}
+#page #page-header .tag {
   font-size: 1rem;
   padding: 0;
   text-transform: uppercase;
@@ -433,7 +440,7 @@ h2.header {
   margin-bottom: 0.25rem;
   font-family: "Azeret Mono", monospace;
 }
-#page #page-intro h2 {
+#page #page-header h2 {
   padding: 0;
   margin: 0;
   text-transform: uppercase;
@@ -448,9 +455,6 @@ h2.header {
   line-height: 1.175;
   text-transform: none;
   letter-spacing: 0;
-}
-#page #page-intro p {
-  font-weight: 600;
 }
 #page #main-image {
   margin: 3rem auto 6rem auto;

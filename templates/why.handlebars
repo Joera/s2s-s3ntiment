@@ -9,11 +9,14 @@
         <section id="page_container" class="container container-small">
           
             <article class="page">   
-                <span class="tag">{{custom.subtitle}}</span>
-                <h2>{{title}}</h2> 
-               
-                {{{extract_images extract_intro content}}}          
-            </article>
+
+                <section id="page-intro">
+                    <span class="tag">{{custom.subtitle}}</span>
+                    <h2>{{title}}</h2> 
+                
+                    {{{extract_images content}}}
+                </section>        
+            </article>`
 
             {{#each collections.why}}
                 <article id="{{this.id}}" class="block" author="{{this.author}}">

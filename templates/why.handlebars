@@ -5,29 +5,31 @@
 <body id="page">
     {{> header}}
     <main id="page">
-
-        <section id="page_container" class="container container-small">
           
             <article class="page">   
 
-                <section id="page-intro">
+                <section id="page-header">
                     <span class="tag">{{custom.subtitle}}</span>
                     <h2>{{title}}</h2> 
-                
-                    {{{extract_images content}}}
-                </section>        
-            </article>`
+                </section> 
 
-            {{#each collections.why}}
-                <article id="{{this.id}}" class="block" author="{{this.author}}">
-                    <span class="tag">{{this.custom.subtitle}}</span>
-                    <h3>{{this.title}}</h3>
-                    {{{this.custom.summary}}}
-                    <a href=".{{this.path}}">Meer over {{this.custom.subtitle}}</a>
-                </article>
-            {{/each}}
+                {{{content}}}
+                       
+            </article>
+
+            <section class="container container-large flex-centered">
+
+                {{#each collections.why}}
+                    <article id="{{this.id}}" class="block" author="{{this.author}}">
+                        <span class="tag">{{this.custom.subtitle}}</span>
+                        <h3>{{this.title}}</h3>
+                        {{{this.custom.summary}}}
+                        <a href=".{{this.path}}">Meer over {{this.custom.subtitle}}</a>
+                    </article>
+                {{/each}}
+
+            </section>
         
-        </section>
     </main>
     {{> footer }}
 </body>

@@ -9,16 +9,40 @@
     width: 100%;
     align-items: center;
 
-    p {
-        font-size: 1.125rem;
-        line-height: 1.425;
-    }
+    article.page {
 
-    > p {
-        @include container-small;
+        display: flex;
+        align-items: center;
 
-        &:first-of-type {
-            font-weight: 700;
+        p {
+            font-size: 1.125rem;
+            line-height: 1.425;
+        }
+
+        > p {
+            @include container-small;
+
+            &:first-of-type {
+                font-weight: 700;
+            }
+        }
+
+        h3 {
+
+            @include heading-h3;
+            color: $teal-darkest;
+            margin-bottom: .75rem;
+            
+        }
+
+        h4 {
+            @include heading-h4;
+        }
+
+        a {
+            color: $teal-darkest;
+            text-decoration: none;
+            border-bottom: 1px solid $teal-medium;
         }
     }
 
@@ -53,28 +77,6 @@
         img {
             width: 100%;
             height: auto;
-        }
-    }
-
-    .paragraph {
-
-
-        h3 {
-
-            @include heading-h3;
-            color: $teal-darkest;
-            margin-bottom: .75rem;
-            
-        }
-
-        h4 {
-            @include heading-h4;
-        }
-
-        a {
-            color: $teal-darkest;
-            text-decoration: none;
-            border-bottom: 1px solid $teal-medium;
         }
     }
 

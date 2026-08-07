@@ -13,6 +13,7 @@
 
         display: flex;
         align-items: center;
+        flex-direction: column;
 
         p {
             font-size: 1.125rem;
@@ -27,15 +28,17 @@
             }
         }
 
-        h3 {
+        > h3 {
 
+            @include container-small;
             @include heading-h3;
             color: $teal-darkest;
-            margin-bottom: .75rem;
-            
+            margin-bottom: 1.5rem;  
         }
 
-        h4 {
+
+        > h4 {
+            @include container-small;
             @include heading-h4;
         }
 
@@ -44,12 +47,17 @@
             text-decoration: none;
             border-bottom: 1px solid $teal-medium;
         }
+
+        > a {
+            @include container-small;
+        }
     }
 
     #page-header {
 
-        margin-top: 6rem;
         @include container-small;
+        margin-top: 6rem;
+        
 
         .tag {
             @include heading-h2;

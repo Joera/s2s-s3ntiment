@@ -420,6 +420,7 @@ h2.header {
 #page article.page {
   display: flex;
   align-items: center;
+  flex-direction: column;
 }
 #page article.page p {
   font-size: 1.125rem;
@@ -431,16 +432,18 @@ h2.header {
 #page article.page > p:first-of-type {
   font-weight: 700;
 }
-#page article.page h3 {
+#page article.page > h3 {
+  max-width: 900px;
   font-family: "Oswald";
   font-weight: 600;
   font-size: 1.8rem;
   line-height: 1.2;
   margin: 0;
   color: #355C53;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1.5rem;
 }
-#page article.page h4 {
+#page article.page > h4 {
+  max-width: 900px;
   font-size: 1rem;
   padding: 0;
   font-weight: 600;
@@ -450,9 +453,12 @@ h2.header {
   text-decoration: none;
   border-bottom: 1px solid #7CCDBC;
 }
-#page #page-header {
-  margin-top: 6rem;
+#page article.page > a {
   max-width: 900px;
+}
+#page #page-header {
+  max-width: 900px;
+  margin-top: 6rem;
 }
 #page #page-header .tag {
   font-size: 1rem;

@@ -20,6 +20,7 @@
 }
 
 .container-large {
+    @include container;
     @include container-large;
 }
 
@@ -28,6 +29,7 @@
 }
 
 .container-small {
+    @include container;
     @include container-small;
 }
 
@@ -36,6 +38,7 @@
 }
 
 .container-smaller {
+    @include container;
     @include container-smaller;
 }
 
@@ -44,6 +47,7 @@
 }
 
 .container-full {
+    @include container;
     @include container-full;
 }
 
@@ -60,11 +64,7 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: flex-start;
-
-
     }
-
-    
 
     > * {
         flex: 1;

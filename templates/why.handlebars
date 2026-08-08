@@ -9,7 +9,7 @@
             <article class="page">   
 
                 <section id="page-header">
-                    <span class="tag">{{custom.subtitle}}</span>
+                    <span class="tag">{{custom.slug}}</span>
                     <h2>{{title}}</h2> 
                 </section> 
 
@@ -21,10 +21,9 @@
 
                 {{#each collections.why}}
                     <article id="{{this.id}}" class="block" author="{{this.author}}">
-                        <span class="tag">{{this.custom.subtitle}}</span>
-                        <h3>{{this.title}}</h3>
+                        <span class="tag">{{this.slug}}</span>
                         {{{this.custom.summary}}}
-                        <a href=".{{this.path}}">Meer over {{this.custom.subtitle}}</a>
+                        <a href="{{this.path}}">Meer over {{this.slug}}</a>
                     </article>
                 {{/each}}
 

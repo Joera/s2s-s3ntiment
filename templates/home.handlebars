@@ -16,10 +16,9 @@
 
                 {{#each collections.why}}
                     <article id="{{this.id}}" class="block" author="{{this.author}}">
-                        <span class="tag">{{this.custom.subtitle}}</span>
-                        <h3>{{this.title}}</h3>
+                        <span class="tag">{{this.slug}}</span>
                         {{{this.custom.summary}}}
-                        <a href=".{{this.path}}">Meer over {{this.custom.subtitle}}</a>
+                        <a href="{{this.path}}">Meer over {{this.slug}}</a>
                     </article>
                 {{/each}}
 
@@ -27,13 +26,13 @@
 
         </section>
 
-        <section class="intermezzo container flex-centered">
+        <section class="intermezzo text-scramble container flex-centered">
         
-            <article class="container container-large flex-centered">
-                <h3 text-scramble style="display: grid; grid-template-columns: repeat(24, 32px); gap: 4px; width: 860px;">
+            {{!-- <article class="container container-large flex-centered">
+                <h3 text-scramble style="display: grid; grid-template-columns: repeat(24, 32px); gap: 4px; width: 860px;"> --}}
                     Wij maken cryptografie toegankelijk voor iedere organisatie. Zware wiskunde, simpel in gebruik.
-                </h3>
-            </article>
+                {{!-- </h3>
+            </article> --}}
         </section>
 
          <section id="how" class="container flex-centered">

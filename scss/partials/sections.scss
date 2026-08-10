@@ -21,3 +21,28 @@ section.aside {
     }
 
 }
+
+section.summary {
+    
+    @include container;
+    @include container-small;
+    background: $teal-darkest;
+    color: $gray-lightest;
+    padding: 1.5rem;
+    display: inline-block;
+    margin: 1.5rem auto 3rem auto;
+
+    h3 {
+        @include heading-h3;
+    }
+
+    ul { 
+        list-style-type: circle;
+        margin-left: 0; 
+    }
+
+    p:last-of-type {
+        margin-bottom: 0;
+    }
+
+}

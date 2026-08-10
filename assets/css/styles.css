@@ -924,4 +924,37 @@ section.aside p:last-of-type {
   margin-bottom: 0;
 }
 
+section.summary {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+@media (min-width: 640px) {
+  section.summary {
+    width: calc(100% - 1.5rem);
+  }
+}
+section.summary {
+  max-width: 900px;
+  background: #355C53;
+  color: #EDEFF0;
+  padding: 1.5rem;
+  display: inline-block;
+  margin: 1.5rem auto 3rem auto;
+}
+section.summary h3 {
+  font-family: "Oswald";
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 1.2;
+  margin: 0;
+}
+section.summary ul {
+  list-style-type: circle;
+  margin-left: 0;
+}
+section.summary p:last-of-type {
+  margin-bottom: 0;
+}
+
 /*# sourceMappingURL=styles.css.map */

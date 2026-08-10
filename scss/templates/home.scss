@@ -28,7 +28,8 @@ h2.header {
 
     @include breakpoint('sm') {
 
-        height: calc(100vh - 5rem - 12rem)
+        height: calc(100vh - 5rem - 12rem);
+        max-height: 760px;
     }
 }
 
@@ -57,7 +58,7 @@ h2.header {
     .tabs {
         display: flex;
         flex-direction: row;
-        margin-bottom: 4.5rem;
+        // margin-bottom: 4.5rem;
 
     }
 
@@ -79,18 +80,19 @@ h2.header {
     .tabs:has(#tr:checked) .tab:first-of-type,
     .tabs:has(#to:checked) .tab:last-of-type {
        border-bottom: none;
-       border-top: 1px solid $teal-darkest;
+    //    border-top: 1px solid $teal-darkest;
+       background-color: $warm-gray-light;
     }
 
-    .tabs:has(#tr:checked) .tab:first-of-type {
-        border-right:  1px solid $teal-darkest;
-        border-left: 1px solid $teal-darkest;
-    }
+    // .tabs:has(#tr:checked) .tab:first-of-type {
+    //     border-right:  1px solid $teal-darkest;
+    //     border-left: 1px solid $teal-darkest;
+    // }
 
-    .tabs:has(#to:checked) .tab:last-of-type {
-        border-right:  1px solid $teal-darkest;
-        border-left: 1px solid $teal-darkest;
-    }
+    // .tabs:has(#to:checked) .tab:last-of-type {
+    //     border-right:  1px solid $teal-darkest;
+    //     border-left: 1px solid $teal-darkest;
+    // }
 
     // organisator hidden by default
     #respondent ~ #organisator {
@@ -103,6 +105,16 @@ h2.header {
     }
     .tabs:has(#to:checked) ~ #organisator {
         display: block !important;
+    }
+
+    .row-wrap {
+        background: $warm-gray-light;
+        padding: 1.5rem;
+    }
+
+    .block {
+        background: $warm-gray-lightest;
+        padding: .75rem;
     }
 
     // caret between blocks

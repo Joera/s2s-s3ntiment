@@ -307,6 +307,7 @@ h2.header {
 @media (min-width: 640px) {
   #intro {
     height: calc(100vh - 5rem - 12rem);
+    max-height: 760px;
   }
 }
 
@@ -332,7 +333,6 @@ h2.header {
 #how .tabs {
   display: flex;
   flex-direction: row;
-  margin-bottom: 4.5rem;
 }
 #how .tab {
   display: inline-block;
@@ -347,15 +347,7 @@ h2.header {
 #how .tabs:has(#tr:checked) .tab:first-of-type,
 #how .tabs:has(#to:checked) .tab:last-of-type {
   border-bottom: none;
-  border-top: 1px solid #355C53;
-}
-#how .tabs:has(#tr:checked) .tab:first-of-type {
-  border-right: 1px solid #355C53;
-  border-left: 1px solid #355C53;
-}
-#how .tabs:has(#to:checked) .tab:last-of-type {
-  border-right: 1px solid #355C53;
-  border-left: 1px solid #355C53;
+  background-color: #C3C4B8;
 }
 #how #respondent ~ #organisator {
   display: none;
@@ -365,6 +357,14 @@ h2.header {
 }
 #how .tabs:has(#to:checked) ~ #organisator {
   display: block !important;
+}
+#how .row-wrap {
+  background: #C3C4B8;
+  padding: 1.5rem;
+}
+#how .block {
+  background: #EEEEE6;
+  padding: 0.75rem;
 }
 #how .container-large .block.ordered + .block.ordered::before {
   content: "›";

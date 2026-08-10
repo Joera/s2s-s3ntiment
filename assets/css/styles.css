@@ -481,6 +481,7 @@ h2.header {
 }
 #page article.page > p:first-of-type {
   font-weight: 700;
+  margin-bottom: 4.5rem;
 }
 #page article.page > h3 {
   display: flex;
@@ -500,7 +501,8 @@ h2.header {
   line-height: 1.2;
   margin: 0;
   color: #355C53;
-  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+  margin-bottom: 0.75rem;
 }
 #page article.page > h4 {
   display: flex;
@@ -896,16 +898,30 @@ main {
 }
 
 section.aside {
-  max-width: 680px;
-  background: #9B9D90;
-  padding: 0.75rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+@media (min-width: 640px) {
+  section.aside {
+    width: calc(100% - 1.5rem);
+  }
+}
+section.aside {
+  max-width: 900px;
+  background: #C3C4B8;
+  padding: 1.5rem;
   display: inline-block;
-  margin: 3rem 0;
+  margin: 1.5rem auto 3rem auto;
 }
 section.aside h3 {
   font-size: 1rem;
   padding: 0;
   font-weight: 600;
+  font-size: 1.125rem;
+}
+section.aside p:last-of-type {
+  margin-bottom: 0;
 }
 
 /*# sourceMappingURL=styles.css.map */

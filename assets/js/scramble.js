@@ -1,3 +1,27 @@
+function buildScramble(section) {
+  // Idempotency: skip if the injected structure already exists.
+  if (section.querySelector('article')) return;
+
+  const text = section.innerText.trim();
+
+  const h3 = document.createElement('h3');
+  h3.setAttribute('text-scramble', '');
+  h3.style.display = 'grid';
+  h3.style.gridTemplateColumns = 'repeat(24, 32px)';
+  h3.style.gap = '4px';
+  h3.style.width = '860px';
+  h3.textContent = text;
+
+  const article = document.createElement('article');
+  article.className = 'container container-large flex-centered';
+  article.appendChild(h3);
+
+  section.innerHTML = '';
+  section.appendChild(article);
+
+  initScramble(h3);
+}
+
 function initScramble(el) {
   const cols = 24;
   const cellSize = 32;
@@ -39,7 +63,6 @@ function initScramble(el) {
   const delay = ms => new Promise(r => setTimeout(r, ms));
 
   async function doScramble() {
-
     // scramble all at once
     const shuffled = [...origChars].sort(() => Math.random() - 0.5);
     spans.forEach((s, i) => s.textContent = shuffled[i].char);
@@ -69,4 +92,4 @@ function initScramble(el) {
   return () => { cancelled = true; };
 }
 
-document.querySelectorAll('.intermezzo h3').forEach(el => initScramble(el));
+document.querySelectorAll('.text-scramble').forEach(section => buildScramble(section));

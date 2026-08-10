@@ -26,6 +26,7 @@
 
             &:first-of-type {
                 font-weight: 700;
+                margin-bottom: 4.5rem;
             }
         }
 
@@ -35,7 +36,8 @@
             @include container-smaller;
             @include heading-h3;
             color: $teal-darkest;
-            margin-bottom: 1.5rem;  
+            font-size: 1.6rem;
+            margin-bottom: .75rem;  
         }
 
 

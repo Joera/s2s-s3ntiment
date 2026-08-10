@@ -1,17 +1,23 @@
 @use '../styleguide/colours' as *;
 @use '../styleguide/typography' as *;
+@use '../basics/layout' as *;
 
 section.aside {
     
-    
-    max-width: 680px;
-    background: $warm-gray-medium;
-    padding: .75rem 1.5rem;
+    @include container;
+    @include container-small;
+    background: $warm-gray-light;
+    padding: 1.5rem;
     display: inline-block;
-    margin: 3rem 0;
+    margin: 1.5rem auto 3rem auto;
 
     h3 {
         @include heading-h4;
+        font-size: 1.125rem;
+    }
+
+    p:last-of-type {
+        margin-bottom: 0;
     }
 
 }

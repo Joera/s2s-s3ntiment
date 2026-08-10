@@ -1,0 +1,17 @@
+@use '../styleguide/colours' as *;
+@use '../styleguide/typography' as *;
+
+section.aside {
+    
+    
+    max-width: 680px;
+    background: $warm-gray-medium;
+    padding: .75rem 1.5rem;
+    display: inline-block;
+    margin: 3rem 0;
+
+    h3 {
+        @include heading-h4;
+    }
+
+}

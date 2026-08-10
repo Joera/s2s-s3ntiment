@@ -338,7 +338,6 @@ h2.header {
   display: inline-block;
   padding: 0.75rem 1.5rem;
   margin-right: -1px;
-  border-bottom: 1px solid #355C53;
   cursor: pointer;
   font-family: "Azeret Mono", monopace;
   font-size: 1rem;
@@ -365,15 +364,19 @@ h2.header {
 #how .block {
   background: #EEEEE6;
   padding: 0.75rem;
+  margin-right: 3rem;
+}
+#how .block:last-of-type {
+  margin-right: 0;
 }
 #how .container-large .block.ordered + .block.ordered::before {
   content: "›";
   color: white;
   font-weight: 300;
-  font-size: 2rem;
+  font-size: 3rem;
   position: absolute;
-  left: -0.5rem;
-  top: 1.5rem;
+  left: -1.75rem;
+  top: calc(50% - 3rem);
 }
 
 #features {

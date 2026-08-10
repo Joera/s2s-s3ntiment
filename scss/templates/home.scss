@@ -47,8 +47,6 @@ h2.header {
 
 #how {
 
-    
-
     @include breakpoint('sm') {
         padding-bottom: 6rem;
     }
@@ -58,8 +56,6 @@ h2.header {
     .tabs {
         display: flex;
         flex-direction: row;
-        // margin-bottom: 4.5rem;
-
     }
 
     .tab {
@@ -68,7 +64,7 @@ h2.header {
         margin-right: -1px;
         
         // border-right: 1px solid $teal-darkest;
-        border-bottom: 1px solid $teal-darkest;
+        // border-bottom: 1px solid $teal-darkest;
         
         cursor: pointer;
         font-family: "Azeret Mono", monopace;
@@ -115,17 +111,22 @@ h2.header {
     .block {
         background: $warm-gray-lightest;
         padding: .75rem;
+        margin-right: 3rem;
+
+        &:last-of-type {
+            margin-right: 0;
+        }
     }
 
     // caret between blocks
     .container-large .block.ordered + .block.ordered::before {
-        content: '›';
+        content: "›";
         color: white;
         font-weight: 300;
-        font-size: 2rem;
+        font-size: 3rem;
         position: absolute;
-        left: -0.5rem;
-        top: 1.5rem;
+        left: -1.75rem;
+        top: calc(50% - 3rem);
     }
 
 }

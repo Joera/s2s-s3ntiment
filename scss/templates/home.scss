@@ -104,8 +104,12 @@ h2.header {
     }
 
     .row-wrap {
-        background: $warm-gray-light;
+        background: $warm-gray-lighter;
         padding: 1.5rem;
+
+        > div {
+            align-items: stretch;
+        }
     }
 
     .block {
@@ -115,7 +119,7 @@ h2.header {
 
         h3 {
             font-size: 1.5rem;
-            color: $warm-gray-deeper;
+            color: $gray-black;
         }
 
         &:last-of-type {
@@ -125,7 +129,7 @@ h2.header {
         .triangle {
             position: absolute;
             top: 0;
-            right: 0;
+            right: -2.5rem;
             height: 100%;                       /* fills div height */
             width: 2.5rem;         /* protrudes 2rem to the right */
             fill: $warm-gray-lightest;                     /* triangle color */

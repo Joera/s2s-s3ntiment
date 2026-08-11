@@ -15,4 +15,13 @@
             color: $teal-darkest;
         }
     }
+
+    > .container {
+        flex-direction: row;
+        align-items: flex-start;
+
+        > div {
+            flex: 1;
+        }
+    }
 }

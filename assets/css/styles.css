@@ -596,13 +596,24 @@ h2.header {
   height: auto;
 }
 #page #summary {
-  margin: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+@media (min-width: 640px) {
+  #page #summary {
+    width: calc(100% - 1.5rem);
+  }
+}
+#page #summary {
+  max-width: 900px;
+  margin: 3rem auto;
   padding: 1.5rem;
 }
 #page #summary h3 {
   font-family: "Azeret Mono", monospace;
   margin-bottom: 1.5rem;
-  font-size: 1.125rem;
+  font-size: 1rem;
   color: black;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -732,6 +743,13 @@ h2.header {
 }
 #footer h1 span {
   color: #355C53;
+}
+#footer > .container {
+  flex-direction: row;
+  align-items: flex-start;
+}
+#footer > .container > div {
+  flex: 1;
 }
 
 header {
@@ -933,6 +951,8 @@ section.aside h3 {
   line-height: 1.2;
   margin: 0;
   font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #355C53;
 }
 section.aside p:last-of-type {
   margin-bottom: 0;

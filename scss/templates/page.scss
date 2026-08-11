@@ -96,14 +96,16 @@
 
     #summary {
 
-        margin: 3rem 0;
+        @include container;
+        @include container-small;
+        margin: 3rem auto;
         padding: 1.5rem;
 
         h3 {
 
             font-family: "Azeret Mono", monospace;
             margin-bottom: 1.5rem;
-            font-size: 1.125rem;
+            font-size: 1rem;
             color: black;
             text-transform: uppercase;
             letter-spacing: .5px;

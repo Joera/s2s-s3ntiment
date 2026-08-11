@@ -473,8 +473,8 @@ h2.header {
   flex-direction: column;
 }
 #page article.page p {
-  font-size: 1.125rem;
-  line-height: 1.425;
+  font-size: 1.05rem;
+  line-height: 1.55;
 }
 #page article.page > p {
   display: flex;
@@ -491,7 +491,8 @@ h2.header {
 }
 #page article.page > p:first-of-type {
   font-weight: 700;
-  margin-bottom: 4.5rem;
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
 }
 #page article.page > h3 {
   display: flex;
@@ -607,7 +608,7 @@ h2.header {
 }
 #page #summary {
   max-width: 690px;
-  margin: 3rem auto;
+  margin: 0 auto;
   padding: 1.5rem;
 }
 #page #summary h3 {
@@ -623,9 +624,10 @@ h2.header {
   background: #355C53;
   flood-color: white;
   margin: auto;
-  padding: 3rem 1.5rem 1.5rem 1.5rem;
-  list-style-type: disc;
-  width: calc(100% - 3rem);
+  padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+  list-style-type: none;
+  width: 100%;
+  margin-left: -1.5rem;
 }
 #page #summary ul li {
   margin-bottom: 0.75rem;

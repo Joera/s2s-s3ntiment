@@ -370,7 +370,6 @@ h2.header {
 }
 #how .block h3 {
   font-size: 1.5rem;
-  color: #191B1C;
 }
 #how .block:last-of-type {
   margin-right: 0;
@@ -398,6 +397,9 @@ h2.header {
 }
 #features .container > article {
   max-width: 400px;
+}
+#features .container > article h3 {
+  color: #7B404D;
 }
 
 .intermezzo {
@@ -448,7 +450,7 @@ h2.header {
   font-size: 1.8rem;
   line-height: 1.2;
   margin: 0;
-  color: #355C53;
+  color: #7B404D;
   font-size: 2.8rem;
   line-height: 1.2;
 }

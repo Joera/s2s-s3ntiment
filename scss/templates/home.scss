@@ -104,7 +104,7 @@ h2.header {
     }
 
     .row-wrap {
-        background: $warm-gray-lighter;
+        background: $warm-gray-lightest;
         padding: 1.5rem;
 
         > div {
@@ -113,7 +113,7 @@ h2.header {
     }
 
     .block {
-        background: $warm-gray-lightest;
+        background: $warm-gray-ultralight;
         padding: .75rem;
         margin-right: 3rem;
 
@@ -132,7 +132,7 @@ h2.header {
             right: -2.5rem;
             height: 100%;                       /* fills div height */
             width: 2.5rem;         /* protrudes 2rem to the right */
-            fill: $warm-gray-lightest;                     /* triangle color */
+            fill: $warm-gray-ultralight;                     /* triangle color */
         }
     }
 

@@ -113,21 +113,35 @@ h2.header {
         padding: .75rem;
         margin-right: 3rem;
 
+        h3 {
+            font-size: 1.5rem;
+            color: $warm-gray-deeper;
+        }
+
         &:last-of-type {
             margin-right: 0;
+        }
+
+        .triangle {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;                       /* fills div height */
+            width: 2.5rem;         /* protrudes 2rem to the right */
+            fill: $warm-gray-lightest;                     /* triangle color */
         }
     }
 
     // caret between blocks
-    .container-large .block.ordered + .block.ordered::before {
-        content: "›";
-        color: white;
-        font-weight: 300;
-        font-size: 3rem;
-        position: absolute;
-        left: -1.75rem;
-        top: calc(50% - 3rem);
-    }
+    // .container-large .block.ordered + .block.ordered::before {
+    //     content: "›";
+    //     color: white;
+    //     font-weight: 300;
+    //     font-size: 3rem;
+    //     position: absolute;
+    //     left: -1.75rem;
+    //     top: calc(50% - 3rem);
+    // }
 
 }
 

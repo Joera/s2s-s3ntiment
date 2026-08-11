@@ -1,0 +1,16 @@
+{
+  "id": "why-fixture",
+  "author": "0x0D5e",
+  "locale": "nl",
+  "language": "nl",
+  "postType": "why",
+  "creationDate": "2026-08-11",
+  "publication": "s3ntiment.s2s",
+  "encryption": false,
+  "title": "Waarom S3ntiment?",
+  "slug": "waarom",
+  "content": "<p>De meest waardevolle feedback ligt in antwoorden die mensen nu niet durven te geven.</p>\n<!-- section class=\"aside\">S3ntiment maakt het mogelijk om die antwoorden wél te verzamelen — veilig, anoniem en zonder risico.<!-- /section -->\n<p>Cryptografie is de basis: zware wiskunde, simpel in gebruik.</p>",
+  "custom": {
+    "slug": "waarom"
+  }
+}

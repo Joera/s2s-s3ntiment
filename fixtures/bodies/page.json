@@ -1,0 +1,14 @@
+{
+  "id": "page-fixture",
+  "author": "0x0D5e",
+  "locale": "nl",
+  "language": "nl",
+  "postType": "page",
+  "creationDate": "2026-08-11",
+  "publication": "s3ntiment.s2s",
+  "encryption": false,
+  "title": "Veiligheid",
+  "slug": "veiligheid",
+  "content": "<p>Veiligheid staat bij S3ntiment voorop. Antwoorden worden end-to-end versleuteld en zijn nooit herleidbaar tot een persoon.</p>\n<!-- section class=\"aside\">Versleuteling gebeurt lokaal bij de gebruiker — geen enkele partij, ook wij niet, kan jouw antwoorden lezen zonder de juiste sleutel.<!-- /section -->\n<p>Zo blijft eerlijke feedback mogelijk zonder dat iemand er gevolgen van ondervindt.</p>",
+  "custom": {}
+}

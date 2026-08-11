@@ -399,7 +399,7 @@ h2.header {
   max-width: 400px;
 }
 #features .container > article h3 {
-  color: #AA5A6C;
+  color: #355C53;
 }
 
 .intermezzo {
@@ -606,7 +606,7 @@ h2.header {
   }
 }
 #page #summary {
-  max-width: 900px;
+  max-width: 690px;
   margin: 3rem auto;
   padding: 1.5rem;
 }
@@ -624,8 +624,8 @@ h2.header {
   flood-color: white;
   margin: auto;
   padding: 3rem 1.5rem 1.5rem 1.5rem;
-  padding-left: 3rem;
   list-style-type: disc;
+  width: calc(100% - 3rem);
 }
 #page #summary ul li {
   margin-bottom: 0.75rem;
@@ -634,6 +634,9 @@ h2.header {
 }
 #page #summary button {
   align-self: flex-start;
+}
+#page #links {
+  margin: 3rem auto;
 }
 
 .block {
@@ -745,7 +748,6 @@ h2.header {
   color: #355C53;
 }
 #footer > .container {
-  flex-direction: row;
   align-items: flex-start;
 }
 #footer > .container > div {

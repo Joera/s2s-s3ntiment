@@ -97,7 +97,7 @@
     #summary {
 
         @include container;
-        @include container-small;
+        @include container-smaller;
         margin: 3rem auto;
         padding: 1.5rem;
 
@@ -118,8 +118,8 @@
             flood-color: white;
             margin:auto;
             padding: 3rem 1.5rem 1.5rem 1.5rem; 
-            padding-left: 3rem;
             list-style-type: disc;
+            width: calc(100% - 3rem);
 
             li {
 
@@ -132,5 +132,10 @@
         button {
             align-self: flex-start;
         }
+    }
+
+    #links {
+
+        margin: 3rem auto;
     }
 }

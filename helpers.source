@@ -1,4 +1,9 @@
 // Publication-supplied helper source for the render-dev kit (RFC B, Option C).
+//
+// CANONICAL LOCATION: this file lives at REPO ROOT, level with mapping.json,
+// as a config-level publication artifact (NOT a dev fixture under fixtures/).
+// It sits alongside the other publication config that shape rendering.
+//
 // This file is read VERBATIM and passed to the render-dev action as
 // `helpersSource`. The action evaluates it in-process as a JS expression that
 // yields a `{ name: (args) => ..., ... }` map of PURE functions, then EXTENDS
@@ -6,7 +11,8 @@
 //
 // NOTE: this must remain a BARE JS EXPRESSION with NO trailing semicolon — the
 // action wraps it as `return (SOURCE);`. That's also why it is NOT a `.js`
-// file: prettier would add a `;` and break the eval.
+// file: prettier would add a `;` and break the eval. render-dev.ts validates
+// this contract fail-fast (locally, before any network) on every run.
 //
 // To add a helper: append a `name: (args) => ...` entry below, then re-run
 // `pnpm render:dev` and refresh http://localhost:3008. No publish, no chain.

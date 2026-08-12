@@ -14,4 +14,61 @@
 ({
   titleCase: (s) => String(s).replace(/\b\w/g, (c) => c.toUpperCase()),
   reverse: (s) => [...String(s)].reverse().join(''),
+  // prevNext — pure: given the why collection (items with a `position` ordering
+  // key) and the currently-rendered item's position, emit the PREV and NEXT
+  // block as raw HTML mirroring the #links block markup, in a CIRCULAR ring:
+  //   ORDER   collection ascending by position
+  //   PREV    = item with the greatest position strictly < current;
+  //             if none, wrap to the largest position (last item)
+  //   NEXT    = item with the least position strictly > current;
+  //             if none, wrap to the smallest position (first item)
+  // So every page always has both a prev and a next (n > 1). For n == 1,
+  // prev and next are the same single item and it is emitted once. For n == 2,
+  // prev and next are the same other item (one step either way in a 2-ring)
+  // and both blocks are emitted. Returns '' when the collection is empty or
+  // the position is not a number.
+  prevNext: (collection, currentPosition) => {
+    if (!Array.isArray(collection)) return '';
+    const cur = Number(currentPosition);
+    if (Number.isNaN(cur)) return '';
+    const esc = (v) =>
+      String(v == null ? '' : v)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    const ordered = collection
+      .filter((it) => it && it.position != null && !Number.isNaN(Number(it.position)))
+      .slice()
+      .sort((a, b) => Number(a.position) - Number(b.position));
+    if (ordered.length === 0) return '';
+    let prev = null;
+    let next = null;
+    for (const it of ordered) {
+      const p = Number(it.position);
+      if (p < cur) prev = it; // greatest strictly-less
+      else if (p > cur && next == null) next = it; // least strictly-greater
+    }
+    if (prev == null) prev = ordered[ordered.length - 1]; // wrap: largest
+    if (next == null) next = ordered[0]; // wrap: smallest
+    const block = (it) =>
+      it
+        ? '<article id="' +
+          esc(it.id) +
+          '" class="block" author="' +
+          esc(it.author) +
+          '">\n<span class="tag">' +
+          esc(it.slug) +
+          '</span>\n' +
+          String((it.custom && it.custom.summary) || '') +
+          '\n<a href="' +
+          esc(it.path) +
+          '">Meer over ' +
+          esc(it.slug) +
+          '</a>\n</article>'
+        : '';
+    if (ordered.length === 1) return block(prev); // n == 1: the single item, once
+    return block(prev) + '\n' + block(next);
+  },
 })

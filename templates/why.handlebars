@@ -19,13 +19,7 @@
 
             <section id="links" class="container container-large flex-centered flex-row">
 
-                {{#each collections.why}}
-                    <article id="{{this.id}}" class="block" author="{{this.author}}">
-                        <span class="tag">{{this.slug}}</span>
-                        {{{this.custom.summary}}}
-                        <a href="{{this.path}}">Meer over {{this.slug}}</a>
-                    </article>
-                {{/each}}
+                {{{prevNext collections.why position}}}
 
             </section>
         

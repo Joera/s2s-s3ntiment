@@ -4,6 +4,7 @@
     "title": "Waarom cryptografie",
     "author": "0x0D5e",
     "creationDate": "2026-08-01",
+    "position": "1",
     "path": "/waarom-cryptografie/",
     "postType": "why",
     "slug": "waarom-cryptografie",
@@ -17,12 +18,27 @@
     "title": "Privacy by design",
     "author": "0x0D5e",
     "creationDate": "2026-08-02",
+    "position": "2",
     "path": "/privacy-by-design/",
     "postType": "why",
     "slug": "privacy-by-design",
     "content": "<p>Privacy is geen functie, het is het fundament.</p>",
     "custom": {
       "summary": "<p>Privacy is geen functie, het is het <b>fundament</b> van vertrouwen.</p>"
+    }
+  },
+  {
+    "id": "why-3",
+    "title": "Cryptografie voor iedereen",
+    "author": "0x0D5e",
+    "creationDate": "2026-08-03",
+    "position": "3",
+    "path": "/cryptografie-voor-iedereen/",
+    "postType": "why",
+    "slug": "cryptografie-voor-iedereen",
+    "content": "<p>Sterke cryptografie hoort beschikbaar te zijn voor iedereen.</p>",
+    "custom": {
+      "summary": "<p>Sterke cryptografie hoort voor <b>iedereen</b> beschikbaar te zijn.</p>"
     }
   },
   {

@@ -119,5 +119,10 @@
         "filters": [ ]
         
       }
-    ]
+    ],
+    "localePaths" : {
+      "default": "", 
+      "nl": "",
+      "en": "/en"
+    }
 }

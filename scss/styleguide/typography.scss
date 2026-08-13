@@ -89,7 +89,7 @@ p {
 @mixin uppercase-mono {
 
     font-family: "Azeret Mono", monospace;
-    letter-spacing: .5rem;
+    letter-spacing: .5px;
     text-transform: uppercase;
     font-weight: 400;
     font-size: 1rem;

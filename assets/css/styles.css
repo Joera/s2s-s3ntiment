@@ -613,12 +613,12 @@ h2.header {
 }
 #page #summary h3 {
   font-family: "Azeret Mono", monospace;
-  margin-bottom: 1.5rem;
-  font-size: 1rem;
-  color: black;
+  letter-spacing: 0.5rem;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
   font-weight: 400;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  color: black;
 }
 #page #summary ul {
   background: #355C53;
@@ -643,12 +643,17 @@ h2.header {
   justify-content: space-between;
 }
 #page #links > a {
-  max-width: 180px;
-  background: #C3C4B8;
+  max-width: 240px;
   padding: 1.5rem;
+  background-color: #AA5A6C;
 }
 #page #links > a h4 {
-  color: #7B404D;
+  font-family: "Azeret Mono", monospace;
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #F6F6F1;
 }
 
 .block {

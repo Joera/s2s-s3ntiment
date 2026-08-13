@@ -104,13 +104,9 @@
 
         h3 {
 
-            font-family: "Azeret Mono", monospace;
+            @include uppercase-mono;
             margin-bottom: 1.5rem;
-            font-size: 1rem;
             color: black;
-            text-transform: uppercase;
-            letter-spacing: .5px;
-            font-weight: 400;
 
         }
 
@@ -143,12 +139,13 @@
         justify-content: space-between;
 
         > a {
-            max-width: 180px;
-            background: $warm-gray-light;
+            max-width: 240px;
             padding: 1.5rem;
+            background-color: $pink-dark;
 
             h4 {
-                color: $pink-deep; 
+                @include uppercase-mono;
+                color:  #F6F6F1;
             }
 
 

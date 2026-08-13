@@ -668,6 +668,7 @@ h2.header {
 #page #links > a:last-of-type .triangle {
   right: -1.5rem;
   left: auto;
+  transform: scaleX(-1);
 }
 
 .block {

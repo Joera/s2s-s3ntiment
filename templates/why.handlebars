@@ -20,7 +20,9 @@
             <section id="links" class="container container-large flex-centered flex-row">
 
                 {{#each (prevNext collections.why position)}}
-                    <article><h2>{{this.slug}}</h2><a href="{{this.path}}">Meer over {{this.slug}}</a></article>
+                    <a href="{{this.path}}">
+                        <h4>Meer over {{this.slug}}</h4>
+                    </a>
                 {{/each}}
 
             </section>

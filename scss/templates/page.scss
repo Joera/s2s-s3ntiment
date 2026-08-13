@@ -140,7 +140,7 @@
 
         > a {
             position: relative;
-            max-width: 240px;
+            max-width: 260px;
             padding: 1.5rem;
             background-color: $pink-dark;
             text-decoration: none;
@@ -156,11 +156,17 @@
                 left: -1.5rem;
                 width: 1.5rem;
                 top: 0;
+                fill: $pink-dark;
+            }
 
-                &:last-of-type {
+            &:last-of-type {
+
+                .triangle {
+
                     right: -1.5rem;
                     left: auto;
                 }
+
             }
 
 

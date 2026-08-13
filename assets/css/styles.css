@@ -644,7 +644,7 @@ h2.header {
 }
 #page #links > a {
   position: relative;
-  max-width: 240px;
+  max-width: 260px;
   padding: 1.5rem;
   background-color: #AA5A6C;
   text-decoration: none;
@@ -663,8 +663,9 @@ h2.header {
   left: -1.5rem;
   width: 1.5rem;
   top: 0;
+  fill: #AA5A6C;
 }
-#page #links > a .triangle:last-of-type {
+#page #links > a:last-of-type .triangle {
   right: -1.5rem;
   left: auto;
 }

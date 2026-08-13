@@ -19,7 +19,9 @@
 
             <section id="links" class="container container-large flex-centered flex-row">
 
-                {{{prevNext collections.why position}}}
+                {{#each (prevNext collections.why position)}}
+                    <article><h2>{{this.slug}}</h2><a href="{{this.path}}">Meer over {{this.slug}}</a></article>
+                {{/each}}
 
             </section>
         

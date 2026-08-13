@@ -1,29 +1,56 @@
 {
   "templateConfig": [
         {
-          "reference": "home",
+          "reference": "home_nl",
           "file": "home.handlebars",
           "path": "/",
           "collections": [
             {
               "slug": "why",
-              "filters": [{"postType": "why"}]
+              "filters": [{"postType": "why", "language": "nl"}]
             },
             {
               "slug": "how-respondent",
-              "filters": [{"postType": "how", "tags": "respondent"}]
+              "filters": [{"postType": "how", "tags": "respondent", "language": "nl"}]
             },
             {
               "slug": "how-organisator",
-              "filters": [{"postType": "how", "tags": "organisator"}]
+              "filters": [{"postType": "how", "tags": "organisator", "language": "nl"}]
             },
             {
               "slug": "features",
-              "filters": [{"postType": "feature" }]
+              "filters": [{"postType": "feature", "language": "nl" }]
             },
             {
               "slug": "who",
-              "filters": [{"postType": "who" }]
+              "filters": [{"postType": "who", "language": "nl" }]
+            }
+          ]
+        },
+        {
+          "reference": "home_en",
+          "file": "home.handlebars",
+          "path": "/en",
+          "collections": [
+            {
+              "slug": "why",
+              "filters": [{"postType": "why", "language": "en"}]
+            },
+            {
+              "slug": "how-respondent",
+              "filters": [{"postType": "how", "tags": "respondent", "language": "en"}]
+            },
+            {
+              "slug": "how-organisator",
+              "filters": [{"postType": "how", "tags": "organisator", "language": "en"}]
+            },
+            {
+              "slug": "features",
+              "filters": [{"postType": "feature", "language": "en" }]
+            },
+            {
+              "slug": "who",
+              "filters": [{"postType": "who", "language": "en" }]
             }
           ]
         },
@@ -77,10 +104,20 @@
     "ripples": [
       {
         "origins": ["post","why","how","feature","who"],
-        "destination": "home",
-        "reference": "home",
+        "trigger_filters": [{"locale": "nl"}],
+        "destination": "home_nl",
+        "reference": "home_nl",
         "query": { "genesis": "0x9a1600a648241726b0470d0b0b85df1d166e0aa74b88789b5f569294baa5a063"},
         "filters": [ ]
+      },
+      {
+        "origins": ["post","why","how","feature","who"],
+        "trigger_filters": [{"locale": "en"}],
+        "destination": "home_en",
+        "reference": "home_en",
+        "query": { "genesis": "0x9a1600a648241726b0470d0b0b85df1d166e0aa74b88789b5f569294baa5a063"},
+        "filters": [ ]
+        
       }
     ]
 }

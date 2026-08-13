@@ -613,7 +613,7 @@ h2.header {
 }
 #page #summary h3 {
   font-family: "Azeret Mono", monospace;
-  letter-spacing: 0.5rem;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
   font-weight: 400;
   font-size: 1rem;
@@ -643,17 +643,30 @@ h2.header {
   justify-content: space-between;
 }
 #page #links > a {
+  position: relative;
   max-width: 240px;
   padding: 1.5rem;
   background-color: #AA5A6C;
+  text-decoration: none;
 }
 #page #links > a h4 {
   font-family: "Azeret Mono", monospace;
-  letter-spacing: 0.5rem;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
   font-weight: 400;
   font-size: 1rem;
   color: #F6F6F1;
+}
+#page #links > a .triangle {
+  height: 100%;
+  position: absolute;
+  left: -1.5rem;
+  width: 1.5rem;
+  top: 0;
+}
+#page #links > a .triangle:last-of-type {
+  right: -1.5rem;
+  left: auto;
 }
 
 .block {

@@ -30,7 +30,7 @@
         {
           "reference": "home_en",
           "file": "home_en.handlebars",
-          "path": "/en",
+          "path": "/",
           "collections": [
             {
               "slug": "why",

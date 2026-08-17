@@ -471,6 +471,7 @@ h2.header {
   display: flex;
   align-items: center;
   flex-direction: column;
+  width: 100%;
 }
 #page article.page p {
   font-size: 1.05rem;
@@ -1005,7 +1006,6 @@ section.quote {
 section.quote {
   max-width: 1200px;
   margin: 3rem auto;
-  justify-content: flex-end;
 }
 section.quote h4 {
   font-family: "Oswald";
@@ -1013,8 +1013,22 @@ section.quote h4 {
   font-size: 1.8rem;
   line-height: 1.2;
   margin: 0;
-  max-width: 600px;
+  max-width: 540px;
   color: #7B404D;
+}
+section.quote.right {
+  justify-content: flex-end;
+}
+section.quote.right h4 {
+  text-align: right;
+  padding-right: 3rem;
+}
+section.quote.left {
+  justify-content: flex-start;
+}
+section.quote.left h4 {
+  text-align: left;
+  padding-left: 3rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

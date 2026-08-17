@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="{{language}}">
+{{> head }}
+<body>
+
+    <img id="crowd2" src="/assets/img/crowd_2.jpg" /> 
+    
+    {{> header}}
+    <main id="app">
+
+        {{> intro}}
+
+        <section id="why" class="container flex-centered">
+
+            <div class="container-large flex-row">
+
+                {{#each collections.why}}
+                    <article id="{{this.id}}" class="block" author="{{this.author}}">
+                        <span class="tag">{{this.slug}}</span>
+                        {{{this.custom.summary}}}
+                        <a href="{{this.path}}">More about{{this.slug}}</a>
+                    </article>
+                {{/each}}
+
+            </div>
+
+        </section>
+
+        <section class="intermezzo text-scramble container flex-centered">
+            We make cryptography accessible to any organisation. Hard maths, easy to use.
+        </section>
+
+         <section id="how" class="container flex-centered">
+
+            <h2 class="header">How it works</h2>
+            <div class="tabs">
+                <input type="radio" name="how" id="tr" checked="">
+                <label for="tr" class="tab">Respondent</label>
+                <input type="radio" name="how" id="to">
+                <label for="to" class="tab">Organisator</label>
+            </div>
+
+            <div id="respondent" class="row-wrap">
+                <div class="container-large flex-row">
+                    {{#each collections.how-respondent}}
+                        <article class="block ordered">
+                            <h3>{{this.title}}</h3>
+                            {{{this.content}}}
+                            <svg class="triangle" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                <polygon points="0,0 100,50 0,100" />
+                            </svg>
+                        </article>
+                    {{/each}}
+                </div>
+            </div>
+
+            <div id="organisator" class="row-wrap">
+                <div class="container-large flex-row">
+                    {{#each collections.how-organisator}}
+                        <article class="block ordered">
+                            <h3>{{this.title}}</h3>
+                            {{{this.content}}}
+                            <svg class="triangle" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                <polygon points="0,0 100,50 0,100" />
+                            </svg>
+                        </article>
+                    {{/each}}
+                </div>
+            </div>
+
+        </section>
+
+        <section id="features" class="container flex-centered">
+
+            <h2 class="header">features</h2>
+
+            <div class="container container-small flex-row flex-stretch">
+
+                {{#each (slice collections.features 0 2)}}
+                    <article class="block centered flex-centered">
+                        <div class="circle"></div>
+                        <h3>{{this.title}}</h3>
+                        {{{this.content}}}
+                    </article>
+                {{/each}}
+
+            </div>
+
+            <div class="container container-small flex-row flex-stretch">
+
+                {{#each (slice collections.features 2 2)}}
+                    <article class="block centered flex-centered">
+                        <div class="circle"></div>
+                        <h3>{{this.title}}</h3>
+                        {{{this.content}}}
+                    </article>
+                {{/each}}
+
+            </div>
+
+        </section>
+
+        <section class="intermezzo text-scramble container flex-centered">
+            Voor iedereen die mensen wil bevragen en eerlijke antwoorden wil terugkrijgen
+        </section>
+
+        <section id="who" class="container flex-centered">
+
+            <h2 class="header">for who?</h2>
+
+            <div class="container-large flex-row">
+                {{#each collections.who}}
+                    <article class="block">
+                        <h3>{{this.title}}</h3>
+                        {{{this.content}}}
+                    </article>
+                {{/each}}
+            </div>
+
+        </section>
+
+        <section id="outro" class="container flex-centered">
+        
+            <article class="container container-small flex-centered">
+            
+                <h3>
+                    De meest waardevolle feedback ligt in antwoorden die mensen nu niet durven te geven. S3ntiment verandert dat.
+                </h3>
+
+                <button class="btn-primary">Neem contact op</button>
+            
+            </article>
+        
+        </section>
+      
+    </main>
+
+    {{> footer }}
+</body>
+    {{> foot }} 
+</html>

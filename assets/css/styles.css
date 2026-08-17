@@ -1005,6 +1005,7 @@ section.quote {
 }
 section.quote {
   max-width: 1200px;
+  flex-direction: row;
   margin: 3rem auto;
 }
 section.quote h4 {

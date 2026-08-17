@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="{{language}}">
+<html lang="{{locale}}">
 {{> head }}
 <body>
 
     <img id="crowd2" src="/assets/img/crowd_2.jpg" /> 
     
-    {{> header}}
+    {{> header this}}
     <main id="app">
 
         {{> intro}}
@@ -16,9 +16,9 @@
 
                 {{#each collections.why}}
                     <article id="{{this.id}}" class="block" author="{{this.author}}">
-                        <span class="tag">{{this.slug}}</span>
+                        <span class="tag">{{this.custom.subtitle}}</span>
                         {{{this.custom.summary}}}
-                        <a href="{{this.path}}">Meer over {{this.slug}}</a>
+                        <a href="{{this.path}}">Meer over {{this.custom.subtitle}}</a>
                     </article>
                 {{/each}}
 
@@ -27,7 +27,7 @@
         </section>
 
         <section class="intermezzo text-scramble container flex-centered">
-            Wij maken cryptographie toegankelijk voor iedere organisatie. Zware wiskunde, simpel in gebruik
+            Wij maken cryptografie toegankelijk voor iedere organisatie. Zware wiskunde, simpel in gebruik
         </section>
 
          <section id="how" class="container flex-centered">

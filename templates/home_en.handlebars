@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="{{language}}">
+<html lang="{{locale}}">
 {{> head }}
 <body>
 
     <img id="crowd2" src="/assets/img/crowd_2.jpg" /> 
     
-    {{> header}}
+    {{> header this}}
     <main id="app">
 
         {{> intro}}
@@ -16,9 +16,9 @@
 
                 {{#each collections.why}}
                     <article id="{{this.id}}" class="block" author="{{this.author}}">
-                        <span class="tag">{{this.slug}}</span>
+                        <span class="tag">{{this.custom.subtitle}}</span>
                         {{{this.custom.summary}}}
-                        <a href="{{this.path}}">More about{{this.slug}}</a>
+                        <a href="{{this.path}}">More about{{this.custom.subtitle}}</a>
                     </article>
                 {{/each}}
 

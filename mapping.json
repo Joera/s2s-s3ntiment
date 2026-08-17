@@ -7,23 +7,23 @@
           "collections": [
             {
               "slug": "why",
-              "filters": [{"postType": "why", "language": "nl"}]
+              "filters": [{"postType": "why", "locale": "nl"}]
             },
             {
               "slug": "how-respondent",
-              "filters": [{"postType": "how", "tags": "respondent", "language": "nl"}]
+              "filters": [{"postType": "how", "tags": "respondent", "locale": "nl"}]
             },
             {
               "slug": "how-organisator",
-              "filters": [{"postType": "how", "tags": "organisator", "language": "nl"}]
+              "filters": [{"postType": "how", "tags": "organisator", "locale": "nl"}]
             },
             {
               "slug": "features",
-              "filters": [{"postType": "feature", "language": "nl" }]
+              "filters": [{"postType": "feature", "locale": "nl" }]
             },
             {
               "slug": "who",
-              "filters": [{"postType": "who", "language": "nl" }]
+              "filters": [{"postType": "who", "locale": "nl" }]
             }
           ]
         },
@@ -34,23 +34,23 @@
           "collections": [
             {
               "slug": "why",
-              "filters": [{"postType": "why", "language": "en"}]
+              "filters": [{"postType": "why", "locale": "en"}]
             },
             {
               "slug": "how-respondent",
-              "filters": [{"postType": "how", "tags": "respondent", "language": "en"}]
+              "filters": [{"postType": "how", "tags": "respondent", "locale": "en"}]
             },
             {
               "slug": "how-organisator",
-              "filters": [{"postType": "how", "tags": "organisator", "language": "en"}]
+              "filters": [{"postType": "how", "tags": "organisator", "locale": "en"}]
             },
             {
               "slug": "features",
-              "filters": [{"postType": "feature", "language": "en" }]
+              "filters": [{"postType": "feature", "locale": "en" }]
             },
             {
               "slug": "who",
-              "filters": [{"postType": "who", "language": "en" }]
+              "filters": [{"postType": "who", "locale": "en" }]
             }
           ]
         },

@@ -29,6 +29,7 @@ section.quote {
 
     @include container;
     @include container-large;
+    flex-direction: row;
     margin: 3rem auto;
     
 

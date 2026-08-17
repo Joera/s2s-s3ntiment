@@ -29,7 +29,7 @@
         },
         {
           "reference": "home_en",
-          "file": "home.handlebars",
+          "file": "home_en.handlebars",
           "path": "/en",
           "collections": [
             {

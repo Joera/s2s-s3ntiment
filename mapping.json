@@ -122,7 +122,7 @@
     ],
     "localePaths" : {
       "default": "", 
-      "nl": "",
-      "en": "/en"
+      "nl": "/nl",
+      "en": ""
     }
 }

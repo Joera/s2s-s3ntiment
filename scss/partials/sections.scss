@@ -28,8 +28,8 @@ section.aside {
 section.quote {
 
     @include container;
-    @include container-small;
-
+    @include container-large;
+    margin: 3rem auto;
     justify-content: flex-end;
 
     h4 { 

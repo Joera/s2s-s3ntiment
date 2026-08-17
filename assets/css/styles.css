@@ -1003,7 +1003,8 @@ section.quote {
   }
 }
 section.quote {
-  max-width: 900px;
+  max-width: 1200px;
+  margin: 3rem auto;
   justify-content: flex-end;
 }
 section.quote h4 {

@@ -1008,7 +1008,7 @@ section.quote {
   flex-direction: row;
   margin: 3rem auto;
 }
-section.quote p, section.quote h3, section.quote h4 {
+section.quote p, section.quote h2, section.quote h3, section.quote h4 {
   font-family: "Oswald";
   font-weight: 600;
   font-size: 1.8rem;
@@ -1016,6 +1016,10 @@ section.quote p, section.quote h3, section.quote h4 {
   margin: 0;
   max-width: 540px;
   color: #7B404D;
+}
+section.quote h2 {
+  font-size: 2.4rem;
+  margin-bottom: 1.5rem;
 }
 section.quote.right {
   justify-content: flex-end;

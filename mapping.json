@@ -7,23 +7,29 @@
           "collections": [
             {
               "slug": "why",
-              "filters": [{"postType": "why", "locale": "nl"}]
+              "filters": [{"postType": "why", "locale": "nl"}],
+              "sortBy" : "position"
             },
             {
               "slug": "how-respondent",
-              "filters": [{"postType": "how", "tags": "respondent", "locale": "nl"}]
+              "filters": [{"postType": "how", "tags": "respondent", "locale": "nl"}],
+              "sortBy" : "position"
             },
             {
               "slug": "how-organisator",
-              "filters": [{"postType": "how", "tags": "organisator", "locale": "nl"}]
+              "filters": [{"postType": "how", "tags": "organisator", "locale": "nl"}],
+              "sortBy" : "position"
             },
             {
               "slug": "features",
-              "filters": [{"postType": "feature", "locale": "nl" }]
+              "filters": [{"postType": "feature", "locale": "nl" }],
+              "sortBy" : "position"
+
             },
             {
               "slug": "who",
-              "filters": [{"postType": "who", "locale": "nl" }]
+              "filters": [{"postType": "who", "locale": "nl" }],
+              "sortBy" : "position"
             }
           ]
         },
@@ -34,23 +40,28 @@
           "collections": [
             {
               "slug": "why",
-              "filters": [{"postType": "why", "locale": "en"}]
+              "filters": [{"postType": "why", "locale": "en"}],
+              "sortBy" : "position"
             },
             {
               "slug": "how-respondent",
-              "filters": [{"postType": "how", "tags": "respondent", "locale": "en"}]
+              "filters": [{"postType": "how", "tags": "respondent", "locale": "en"}],
+              "sortBy" : "position"
             },
             {
               "slug": "how-organisator",
-              "filters": [{"postType": "how", "tags": "organisator", "locale": "en"}]
+              "filters": [{"postType": "how", "tags": "organisator", "locale": "en"}],
+              "sortBy" : "position"
             },
             {
               "slug": "features",
-              "filters": [{"postType": "feature", "locale": "en" }]
+              "filters": [{"postType": "feature", "locale": "en" }],
+              "sortBy" : "position"
             },
             {
               "slug": "who",
-              "filters": [{"postType": "who", "locale": "en" }]
+              "filters": [{"postType": "who", "locale": "en" }],
+              "sortBy" : "position"
             }
           ]
         },
@@ -61,7 +72,8 @@
           "collections": [
             {
               "slug": "why",
-              "filters": [{"postType": "why"}]
+              "filters": [{"postType": "why"}],
+              "sortBy" : "position"
             }
           ]
         },

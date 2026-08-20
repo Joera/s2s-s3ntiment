@@ -1008,7 +1008,7 @@ section.quote {
   flex-direction: row;
   margin: 3rem auto;
 }
-section.quote h4 {
+section.quote p, section.quote h3, section.quote h4 {
   font-family: "Oswald";
   font-weight: 600;
   font-size: 1.8rem;

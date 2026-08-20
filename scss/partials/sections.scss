@@ -33,7 +33,7 @@ section.quote {
     margin: 3rem auto;
     
 
-    h4 { 
+    p, h3, h4 { 
 
         @include heading-h3;
         max-width: 540px;

@@ -9,8 +9,7 @@
 
         <section id="page_container" class="container small_container">
             <div id="contact-form-wrapper">
-                <h2>{{title}}</h2>
-                <form id="contact-form" action="https://formsubmit.co/joera@joeramulders.com" method="POST">
+                <form id="contact-form" action="https://formsubmit.co/ajax/joera@joeramulders.com" method="POST">
                     <input type="hidden" name="_captcha" value="false">
                     <div class="form-group">
                         <label for="contact-name">Naam</label>
@@ -31,6 +30,8 @@
                     <button type="submit" id="contact-submit">Verstuur</button>
                 </form>
             </div>
+
+            <h2>{{title}}</h2>
 
             <article class="page">
                 {{{extract_images content}}}

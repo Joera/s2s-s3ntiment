@@ -60,14 +60,13 @@
 
   form.addEventListener('submit', function (e) {
     e.preventDefault();
-    clearErrors();
 
     if (!validate()) return;
 
     submitBtn.disabled = true;
     submitBtn.textContent = 'Versturen...';
 
-    var data = new FormData(form);
+    var data = new URLSearchParams(new FormData(form));
 
     fetch(form.action, {
       method: 'POST',

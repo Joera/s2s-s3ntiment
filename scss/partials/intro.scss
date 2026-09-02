@@ -36,6 +36,11 @@ main {
 
         margin-top: 0rem;
         position: relative;
+        width: calc(100% - 1.5rem);
+        @include breakpoint('sm') {
+            width: 100%;
+        }
+
     }
 
     h2 {

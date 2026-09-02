@@ -888,6 +888,12 @@ main {
 #intro article {
   margin-top: 0rem;
   position: relative;
+  width: calc(100% - 1.5rem);
+}
+@media (min-width: 640px) {
+  #intro article {
+    width: 100%;
+  }
 }
 #intro h2 {
   display: grid;

@@ -72,49 +72,30 @@
 
         <section id="features" class="container flex-centered">
 
-            <h2 class="header">features</h2>
-
-            <div class="container container-small flex-row flex-stretch">
-
-                {{#each (slice collections.features 0 2)}}
-                    <article class="block centered flex-centered">
-                        <div class="circle"></div>
-                        <h3>{{this.title}}</h3>
-                        {{{this.content}}}
-                    </article>
-                {{/each}}
-
-            </div>
-
-            <div class="container container-small flex-row flex-stretch">
-
-                {{#each (slice collections.features 2 2)}}
-                    <article class="block centered flex-centered">
-                        <div class="circle"></div>
-                        <h3>{{this.title}}</h3>
-                        {{{this.content}}}
-                    </article>
-                {{/each}}
-
-            </div>
-
-        </section>
-
-        <section class="intermezzo text-scramble container flex-centered">
-            For anyone who asks people questions and wants more than what they dare to say.
-        </section>
-
-        <section id="who" class="container flex-centered">
-
             <h2 class="header">for who?</h2>
 
-            <div class="container-large flex-row">
-                {{#each collections.who}}
-                    <article class="block">
+            <div class="container container-small flex-row flex-stretch">
+
+                {{#each (slice collections.who 0 2)}}
+                    <article class="block centered flex-centered">
+                        <div class="circle"></div>
                         <h3>{{this.title}}</h3>
                         {{{this.content}}}
                     </article>
                 {{/each}}
+
+            </div>
+
+            <div class="container container-small flex-row flex-stretch">
+
+                {{#each (slice collections.who 2 2)}}
+                    <article class="block centered flex-centered">
+                        <div class="circle"></div>
+                        <h3>{{this.title}}</h3>
+                        {{{this.content}}}
+                    </article>
+                {{/each}}
+
             </div>
 
         </section>

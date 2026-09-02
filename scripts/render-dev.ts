@@ -291,6 +291,12 @@ function loadSpecs(): RenderSpec[] {
       },
       allDeals,
     },
+    {
+      name: 'contact',
+      templateFile: 'contact',
+      body: body('contact'),
+      templateConfig: { reference: 'contact', file: 'contact', path: '/contact/' },
+    },
   ];
 }
 

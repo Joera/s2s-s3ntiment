@@ -2,9 +2,13 @@
         <article class="container container-large flex-centered">
                 <h2>{{stripHTML title}}</h2>
                 <p><span>{{stripHTML content}}</span></p>
-                <button class="btn-primary">
-                        {{#if (eq locale 'nl')}}Neem contact op{{/if}}
-                        {{#if (eq locale 'en')}}Get in touch{{/if}}
-                </button>
+                
+                <form action="mailto:joera@joeramulders.com" method="post" enctype="text/plain">
+                        <button class="btn-primary">
+                                {{#if (eq locale 'nl')}}Neem contact op{{/if}}
+                                {{#if (eq locale 'en')}}Get in touch{{/if}}
+                        </button>
+
+                </form>
         </article>
 </section> 

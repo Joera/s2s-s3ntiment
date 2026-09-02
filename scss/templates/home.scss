@@ -220,14 +220,18 @@ h2.header {
 
     h3 {
         @include heading-h3;
-        color: $pink-dark; // $teal-darkest;
+        color: $teal-darkest;
         font-size: 2.8rem;
         line-height: 1.2;
+
+        span {
+            color: $pink-dark; 
+        }
     }
 
     button {
 
-        background-color: $pink-dark;
+        background-color: $teal-darkest;
         color: white;
         margin-top: 3rem;
         align-self: center;

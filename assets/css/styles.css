@@ -450,12 +450,15 @@ h2.header {
   font-size: 1.8rem;
   line-height: 1.2;
   margin: 0;
-  color: #AA5A6C;
+  color: #355C53;
   font-size: 2.8rem;
   line-height: 1.2;
 }
+#outro h3 span {
+  color: #AA5A6C;
+}
 #outro button {
-  background-color: #AA5A6C;
+  background-color: #355C53;
   color: white;
   margin-top: 3rem;
   align-self: center;

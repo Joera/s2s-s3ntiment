@@ -1102,6 +1102,8 @@ form .form-group input, form .form-group textarea {
   width: 100%;
   margin-bottom: 1.5rem;
   background: #F6F6F1;
+  padding: 0.25rem 0.75rem;
+  border: 1px solid #595A50;
 }
 
 button#contact-submit {

@@ -1086,14 +1086,14 @@ form {
   justify-content: flex-start;
   align-items: center;
 }
-form form-group {
+form .form-group {
   width: 100%;
 }
-form form-group label {
+form .form-group label {
   display: block;
   margin-bottom: 0.75rem;
 }
-form form-group input {
+form .form-group input {
   width: 100%;
   margin-bottom: 1.5rem;
 }

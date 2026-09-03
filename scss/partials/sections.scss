@@ -9,8 +9,9 @@ section.aside {
     background: $warm-gray-light;
     padding: 1.5rem;
     display: inline-block;
-    margin: 1.5rem auto 3rem 7rem;
-    max-width: calc(690px - 4.5rem);
+    margin: 1.5rem auto 3rem auto;
+    max-width: calc(690px - 2.5rem);
+    transform: translate(5rem, 0px);
 
     h3 {
         @include heading-h3;

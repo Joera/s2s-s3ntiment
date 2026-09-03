@@ -25,6 +25,7 @@ h2.header {
 
     margin-top: 5rem;
     height: calc(100vh - 5rem - 5rem);
+    width: calc(100% - 1.5rem);
 
     @include breakpoint('sm') {
 
@@ -123,7 +124,10 @@ h2.header {
         }
 
         &:last-of-type {
-            margin-right: 0;
+            margin-right: 3rem;
+            @include breakpoint('sm') {
+                margin-right: 0;
+            }
         }
 
         .triangle {
@@ -213,9 +217,11 @@ h2.header {
 
     background: $warm-gray-ultralight;
     padding: 0 1rem;
+    width: calc(100% - 2rem);
 
     @include breakpoint('sm') {
         padding: 0;
+        width: 100%;
     }
 
     h3 {

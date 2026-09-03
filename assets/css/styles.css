@@ -303,6 +303,7 @@ h2.header {
 #intro {
   margin-top: 5rem;
   height: calc(100vh - 5rem - 5rem);
+  width: calc(100% - 1.5rem);
 }
 @media (min-width: 640px) {
   #intro {
@@ -373,7 +374,12 @@ h2.header {
   font-size: 1.5rem;
 }
 #how .block:last-of-type {
-  margin-right: 0;
+  margin-right: 3rem;
+}
+@media (min-width: 640px) {
+  #how .block:last-of-type {
+    margin-right: 0;
+  }
 }
 #how .block .triangle {
   position: absolute;
@@ -439,10 +445,12 @@ h2.header {
 #outro {
   background: #F6F6F1;
   padding: 0 1rem;
+  width: calc(100% - 2rem);
 }
 @media (min-width: 640px) {
   #outro {
     padding: 0;
+    width: 100%;
   }
 }
 #outro h3 {
@@ -1022,8 +1030,9 @@ section.aside {
   background: #C3C4B8;
   padding: 1.5rem;
   display: inline-block;
-  margin: 1.5rem auto 3rem 7rem;
-  max-width: calc(690px - 4.5rem);
+  margin: 1.5rem auto 3rem auto;
+  max-width: calc(690px - 2.5rem);
+  transform: translate(5rem, 0px);
 }
 section.aside h3 {
   font-family: "Oswald";

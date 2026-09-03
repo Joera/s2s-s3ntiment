@@ -1079,4 +1079,11 @@ section.quote.left h4 {
   padding-left: 3rem;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 /*# sourceMappingURL=styles.css.map */

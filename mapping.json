@@ -111,6 +111,13 @@
           "path": "/{slug}/",
           "collections": [],
           "filters": []
+        },
+        {
+          "reference": "contact",
+          "file": "contact.handlebars",
+          "path": "/contact/",
+          "collections": [],
+          "filters": []
         }
     ],
     "ripples": [

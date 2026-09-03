@@ -1,0 +1,14 @@
+{
+  "id": "contact-fixture",
+  "author": "0x0D5e",
+  "locale": "nl",
+  "language": "nl",
+  "postType": "page",
+  "creationDate": "2026-09-02",
+  "publication": "s3ntiment.s2s",
+  "encryption": false,
+  "title": "Contact",
+  "slug": "contact",
+  "content": "<p>Heb je vragen, suggesties of wil je gewoon contact met ons opnemen? Vul het formulier in en we reageren zo snel mogelijk.</p>\n<!-- section class=\"aside\">We lezen elk bericht persoonlijk — jouw privacy staat voorop.<!-- /section -->\n<p>Voor dringende zaken zijn we ook bereikbaar via de sociale kanalen onderaan de pagina.</p>",
+  "custom": {}
+}

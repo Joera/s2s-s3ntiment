@@ -97,7 +97,8 @@ header {
             font-weight: bold;
             text-decoration: none;
             background: $warm-gray-lightest;
-            color:  $gray-black;;
+            color:  $gray-black;
+            font-family: "Azeret Mono", monospace;
 
             &:not(:last-child) {
                 border-right: 1px solid  $gray-black;;

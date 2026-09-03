@@ -879,6 +879,7 @@ header .lang-switcher .lang-cell {
   text-decoration: none;
   background: #EEEEE6;
   color: #191B1C;
+  font-family: "Azeret Mono", monospace;
 }
 header .lang-switcher .lang-cell:not(:last-child) {
   border-right: 1px solid #191B1C;
@@ -1104,6 +1105,14 @@ form .form-group input, form .form-group textarea {
   background: #F6F6F1;
   padding: 0.25rem 0.75rem;
   border: 1px solid #595A50;
+}
+
+.form-feedback {
+  color: #4B252D;
+  margin-bottom: 0.75rem;
+}
+.form-feedback.feedback-success {
+  color: #355C53;
 }
 
 button#contact-submit {

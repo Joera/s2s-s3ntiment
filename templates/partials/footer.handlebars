@@ -7,9 +7,12 @@
             <div>
                 <nav>
                     <ul>
-                        <!-- <li><a href="/new" data-navigo>New</a></li>
-                        <li><a href="/surveys" data-navigo>My Surveys</a></li>
-                        <li><a href="/account" data-navigo>Account</a></li>  -->
+                        {{#if (eq locale 'nl')}}
+                        <li><a href="/nl/contact">Contact</a></li>
+                        {{/if}}
+                        {{#if (eq locale 'en')}}
+                        <li><a href="/contact">Contact</a></li>
+                        {{/if}}
                     </ul>
                 </nav>
             </div>

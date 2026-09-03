@@ -4,8 +4,16 @@
 
 <body id="contact">
     {{> header}}
-    <main>
-        {{> background }}
+    <main id="page">
+        
+        <article class="page">   
+            <section id="page-header">
+                <span class="tag">{{custom.subtitle}}</span>
+                <h2>{{title}}</h2> 
+            </section> 
+            {{{content}}} 
+        </article>
+
 
         <section id="page_container" class="container small_container">
             <div id="contact-form-wrapper">
@@ -31,11 +39,6 @@
                 </form>
             </div>
 
-            <h2>{{title}}</h2>
-
-            <article class="page">
-                {{{extract_images content}}}
-            </article>
         </section>
     </main>
     {{> footer }}

@@ -99,6 +99,7 @@ header {
             background: $warm-gray-lightest;
             color:  $gray-black;
             font-family: "Azeret Mono", monospace;
+            font-weight: 400;
 
             &:not(:last-child) {
                 border-right: 1px solid  $gray-black;;

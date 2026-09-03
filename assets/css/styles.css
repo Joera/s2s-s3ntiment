@@ -880,6 +880,7 @@ header .lang-switcher .lang-cell {
   background: #EEEEE6;
   color: #191B1C;
   font-family: "Azeret Mono", monospace;
+  font-weight: 400;
 }
 header .lang-switcher .lang-cell:not(:last-child) {
   border-right: 1px solid #191B1C;

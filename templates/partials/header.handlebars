@@ -18,5 +18,14 @@
                     <li><a href="/assets/litepaper_v0.pdf" target="_blank">Litepaper</a></li>
             </ul>
         </nav>
+        <div class="lang-switcher">
+            {{#if (eq locale 'nl')}}
+                <a class="lang-cell" href="/">EN</a>
+                <span class="lang-cell active">NL</span>
+            {{else}}
+                <span class="lang-cell active">EN</span>
+                <a class="lang-cell" href="/nl">NL</a>
+            {{/if}}
+        </div>
     </div>
 </header>

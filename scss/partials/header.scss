@@ -77,6 +77,39 @@ header {
         }
     }
 
+    .lang-switcher {
+
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        border: 1px solid black;
+        margin-left: 1rem;
+        flex-shrink: 0;
+
+        .lang-cell {
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 2rem;
+            height: 2rem;
+            font-size: 0.75rem;
+            font-weight: bold;
+            text-decoration: none;
+            background: white;
+            color: black;
+
+            &:not(:last-child) {
+                border-right: 1px solid black;
+            }
+
+            &.active {
+                background: black;
+                color: white;
+            }
+        }
+    }
+
     
 
     h1 {

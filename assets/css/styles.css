@@ -859,6 +859,33 @@ header nav {
 header nav ul li {
   padding: 0 0.75rem;
 }
+header .lang-switcher {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  border: 1px solid black;
+  margin-left: 1rem;
+  flex-shrink: 0;
+}
+header .lang-switcher .lang-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-decoration: none;
+  background: white;
+  color: black;
+}
+header .lang-switcher .lang-cell:not(:last-child) {
+  border-right: 1px solid black;
+}
+header .lang-switcher .lang-cell.active {
+  background: black;
+  color: white;
+}
 header h1 {
   color: black;
   margin: 0.75rem;

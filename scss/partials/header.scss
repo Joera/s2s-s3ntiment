@@ -82,7 +82,7 @@ header {
         display: flex;
         flex-direction: row;
         align-items: stretch;
-        border: 1px solid black;
+        border: 1px solid  $gray-black;;
         margin-left: 1rem;
         flex-shrink: 0;
 
@@ -96,16 +96,16 @@ header {
             font-size: 0.75rem;
             font-weight: bold;
             text-decoration: none;
-            background: white;
-            color: black;
+            background: $warm-gray-lightest;
+            color:  $gray-black;;
 
             &:not(:last-child) {
-                border-right: 1px solid black;
+                border-right: 1px solid  $gray-black;;
             }
 
             &.active {
-                background: black;
-                color: white;
+                background: $gray-black;
+                color: $warm-gray-lightest;
             }
         }
     }
@@ -114,7 +114,7 @@ header {
 
     h1 {
 
-        color: black;
+        color:  $gray-black;
         margin: 0.75rem;
 
         

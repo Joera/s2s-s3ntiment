@@ -3,12 +3,11 @@
                 <h2>{{stripHTML title}}</h2>
                 <p><span>{{stripHTML content}}</span></p>
                 
-                <form action="mailto:joera@joeramulders.com" method="post" enctype="text/plain">
+                <a href="{{#if (eq locale 'nl')}}/nl/contact{{/if}}{{#if (eq locale 'en')}}/contact{{/if}}">
                         <button class="btn-primary">
                                 {{#if (eq locale 'nl')}}Neem contact op{{/if}}
                                 {{#if (eq locale 'en')}}Get in touch{{/if}}
                         </button>
-
-                </form>
+                </a>
         </article>
 </section> 

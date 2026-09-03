@@ -68,6 +68,7 @@ h2.bordered-header {
   font-size: 1rem;
   line-height: 1.55;
   margin: 0;
+  color: #191B1C;
 }
 
 p {
@@ -863,7 +864,7 @@ header .lang-switcher {
   display: flex;
   flex-direction: row;
   align-items: stretch;
-  border: 1px solid black;
+  border: 1px solid #191B1C;
   margin-left: 1rem;
   flex-shrink: 0;
 }
@@ -876,18 +877,18 @@ header .lang-switcher .lang-cell {
   font-size: 0.75rem;
   font-weight: bold;
   text-decoration: none;
-  background: white;
-  color: black;
+  background: #EEEEE6;
+  color: #191B1C;
 }
 header .lang-switcher .lang-cell:not(:last-child) {
-  border-right: 1px solid black;
+  border-right: 1px solid #191B1C;
 }
 header .lang-switcher .lang-cell.active {
-  background: black;
-  color: white;
+  background: #191B1C;
+  color: #EEEEE6;
 }
 header h1 {
-  color: black;
+  color: #191B1C;
   margin: 0.75rem;
 }
 header h1 span {
@@ -1084,6 +1085,17 @@ form {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+}
+form form-group {
+  width: 100%;
+}
+form form-group label {
+  display: block;
+  margin-bottom: 0.75rem;
+}
+form form-group input {
+  width: 100%;
+  margin-bottom: 1.5rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,50 @@
+
+@use '../styleguide/typography' as *;
+@use '../styleguide/colours' as *;
+@use '../basics/layout' as *;
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    .form-group {
+
+        width: 100%; 
+
+        label { 
+            display: block;
+            @include uppercase-mono;
+            margin-bottom: .75rem;
+        }
+
+        input, textarea {
+
+            width: 100%;
+            margin-bottom: 1.5rem;
+            background: $warm-gray-ultralight;
+            padding: .25rem .75rem;
+            border: 1px solid $warm-gray-deeper;
+
+        }
+    }
+}
+
+.form-feedback { 
+
+    color: $pink-darkest;
+    margin-bottom: .75rem;
+
+    &.feedback-success {
+
+        color: $teal-darkest;
+    }
+}
+
+button#contact-submit {
+
+    margin-bottom: 3rem;
+    background-color: $teal-darkest;
+    color: white;
+}
